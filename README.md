@@ -11,4 +11,10 @@
 
 Checkly is going to inform you whenever your website is still deployed online or not by sending you updates on your email (you can mute it). It also gives you screenshot of how your website is currently looking and it runs every 5 minutes.
 
-### We are now going to add some Github actions ###
+### We are now going to add some Github actions and apps ###
+
+-Go to the Github marketplace to find some actions or apps that could be useful to put on your project :
+
+-Imgbot is an app that optimize the weight of your images from your reposity 
+![image](https://user-images.githubusercontent.com/108990733/198542013-9592cd63-6c2f-4a87-a199-4dafd9caab14.png)
+It makes all images from your website load faster and make your website easier to access
