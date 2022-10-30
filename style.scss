@@ -448,6 +448,8 @@ article {
 /* passions */
 
 #passion{
+    height:160vh;
+
     // #passion_title{
     //     @include mixins.flex(column);
     //     margin-left: 4rem;
@@ -458,6 +460,7 @@ article {
     //         width: 14.2rem;
     //     }
     // }
+    background-color: #615086;
 
     .grid_gallery{
     margin: 0 4rem 10rem 4rem;
@@ -471,12 +474,19 @@ article {
         img{
         height:15.6rem;
         width: 28.9rem;
-        object-fit: cover;
+
+        object-fit:cover;
         }
         
         p{
             font-size: 1.3rem;
             color: $sub_text_color;
+        }
+
+        .gallery_item{
+            background-color: #9b9cec;
+            padding: 2rem;
+            border-radius: 0.5rem;
         }
 
     }

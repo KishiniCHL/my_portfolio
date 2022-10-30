@@ -385,6 +385,10 @@ article .example-right {
   }
 }
 /* passions */
+#passion {
+  height: 160vh;
+  background-color: #615086;
+}
 #passion .grid_gallery {
   margin: 0 4rem 10rem 4rem;
   padding-top: 4rem;
@@ -402,6 +406,11 @@ article .example-right {
 #passion .grid_gallery p {
   font-size: 1.3rem;
   color: #686868;
+}
+#passion .grid_gallery .gallery_item {
+  background-color: #9b9cec;
+  padding: 2rem;
+  border-radius: 0.5rem;
 }
 
 /* Projects */
