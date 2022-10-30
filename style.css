@@ -310,7 +310,7 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
 }
 @media screen and (max-width: 900px) {
   #contact #contact_first_text {
-    padding-top: 12rem;
+    padding-top: 7rem;
   }
 }
 #contact #contact_first_text #contact_title {
@@ -384,7 +384,7 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
 }
 @media screen and (max-width: 900px) {
   #contact .email_button_container {
-    padding-bottom: 0;
+    padding-bottom: 5rem;
   }
 }
 #contact .email_button_container #email_button {

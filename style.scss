@@ -302,7 +302,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
         @include mixins.flex(column, center);
         padding-top: 5rem;
         @include mixins.breakpoint(900px){
-            padding-top: 12rem;
+            padding-top: 7rem;
         }
         #contact_title{
             font-family: $main_font_bold;
@@ -365,7 +365,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
         @include mixins.flex(null, null, center);
         padding-bottom: 7rem;
         @include mixins.breakpoint(900px){
-            padding-bottom: 0;
+            padding-bottom: 5rem;
         }
         #email_button{
             @include mixins.flex();
