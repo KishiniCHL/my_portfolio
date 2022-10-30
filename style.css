@@ -457,7 +457,7 @@ article .example-right {
 .content_project_page .content_project_page_description p {
   margin-bottom: 6rem;
 }
-.content_project_page .content_project_page_description #parc_img {
+.content_project_page .content_project_page_description #parc_img, .content_project_page .content_project_page_description #inback_img {
   background-color: #e4bf9d;
   height: 20rem;
   width: 30.9rem;
