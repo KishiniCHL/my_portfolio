@@ -362,7 +362,6 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
 }
 #contact .email {
   width: 30%;
-  padding-bottom: 3.2rem;
 }
 @media screen and (max-width: 900px) {
   #contact .email {
@@ -381,6 +380,12 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
 #contact .email_button_container {
   display: flex;
   justify-content: center;
+  padding-bottom: 7rem;
+}
+@media screen and (max-width: 900px) {
+  #contact .email_button_container {
+    padding-bottom: 0;
+  }
 }
 #contact .email_button_container #email_button {
   display: flex;
@@ -388,14 +393,13 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
   border: solid #615086 0.1rem;
   text-decoration: none;
   padding: 2rem;
-  margin-top: 4rem;
+  margin-top: 3rem;
   font-size: 1.6rem;
 }
 @media screen and (max-width: 900px) {
   #contact .email_button_container #email_button {
     padding: 1rem;
     font-size: 1.3rem;
-    margin-top: 3rem;
   }
 }
 #contact #horizontal_line {
