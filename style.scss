@@ -461,6 +461,7 @@ article {
     //     }
     // }
     background-color: #615086;
+    
 
     .grid_gallery{
     margin: 0 4rem 10rem 4rem;
@@ -487,7 +488,7 @@ article {
             background-color: #9b9cec;
             padding: 2rem;
             border-radius: 0.5rem;
-        }
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;        }
 
     }
 }
@@ -515,7 +516,8 @@ article {
         }
 
         .project_item{
-            background-color: #262626;
+            background-color: #554658;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             @include mixins.flex(column, center);
             padding: 1rem;
             margin: 3.6rem 0  5.9rem 0;
