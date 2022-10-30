@@ -287,7 +287,7 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
 }
 #about_me #about_description #presentation_img {
   height: 25rem;
-  width: 31rem;
+  width: 28.5rem;
   object-fit: cover;
   margin-bottom: 5.1rem;
 }
@@ -343,6 +343,7 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
 }
 
 article {
+  padding-top: 8rem;
   max-width: auto;
   margin: 1em auto;
   overflow: hidden;
