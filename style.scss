@@ -531,7 +531,7 @@ article {
 
 
 .content_project_page{
-    height: 90vh;
+    height: 100vh;
     margin: 0 4rem 0 4rem;
     .content_project_page_description{
         @include mixins.flex(column, center);
