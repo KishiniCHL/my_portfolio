@@ -212,7 +212,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
 .top_content{
     @include mixins.flex(column);
     margin: 4rem;
-    margin-left: 50rem;
+    margin-left: 55rem;
     @include mixins.breakpoint(900px){
         margin: 4rem 4rem 4rem 4rem;
     }
@@ -299,36 +299,66 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
     }
 
     #contact_first_text{
-
+        @include mixins.flex(column, center);
+        padding-top: 5rem;
+        @include mixins.breakpoint(900px){
+            padding-top: 12rem;
+        }
         #contact_title{
             font-family: $main_font_bold;
-            font-size:2.4rem
+            font-size: 3.6rem;
+            @include mixins.breakpoint(900px){
+                font-size:2.4rem
+            }
         }
-        @include mixins.flex(column, center);
-        padding-top: 12rem;
+
 
         #underline_decoration{
         border-top: 0.2rem solid rgb(0, 0, 0);
-        width: 9.1rem;
+        width: 12rem;
+        @include mixins.breakpoint(900px){
+            width: 9.1rem;
+        }
         }
     }
 
     #social_media{
-        margin: 4rem;
+        width: 30%;
         @include mixins.flex(column, center);
+        @include mixins.breakpoint(900px){ 
+            margin: 4rem 4rem 4rem 4rem;
+            width: auto;
+        }
 
         .social_media_img{
-            padding: 5rem;
+            padding: 7rem;
+            @include mixins.breakpoint(900px){
+                padding: 5rem;
+            }
         }
         .social_media_img img{
-            width: 2.4rem;
+            width: 4.7rem;
             height: auto;
+            @include mixins.breakpoint(900px){
+                width: 2.4rem;
+            }
         }
     }
 
-
     .email{
-        padding-bottom: 10rem
+        width: 30%;
+        padding-bottom: 3.2rem;
+        @include mixins.breakpoint(900px){ 
+            width: auto;
+            padding-bottom: 0;
+        }
+        p{
+            padding-bottom: 5rem;
+            @include mixins.breakpoint(900px){
+                padding-bottom: 1rem;
+            }
+        }
+
     }
 
     .email_button_container{
@@ -337,10 +367,30 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
             @include mixins.flex();
             color: #615086;
             border: solid #615086 0.1rem;
-            padding: 1rem;
-            font-size: 1.3rem;
             text-decoration: none;
-            margin-top: 3rem;
+            padding: 2rem;
+            margin-top: 4rem;
+            font-size: 1.6rem;
+            @include mixins.breakpoint(900px){
+                padding: 1rem;
+                font-size: 1.3rem;  
+                margin-top: 3rem;
+            }
+        }
+    }
+
+    #horizontal_line{
+        border-left: 0.4rem solid rgb(0, 0, 0) ;
+        height: 50rem;
+        margin-bottom: 10rem;
+        @include mixins.breakpoint(900px){
+            display: none
+        }
+    }
+    #content_contact{
+        @include mixins.flex(null, center,center);
+        @include mixins.breakpoint(900px){
+            display: block
         }
     }
 }
