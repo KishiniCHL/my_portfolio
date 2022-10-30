@@ -1,35 +1,76 @@
+@use "mixins";
 $sub_text_color: #686868;
-$main_font: 'Roboto', sans-serif;
+$main_font_bold: 'KaiseiOpti_bold', sans-serif;
 @font-face {
     font-family:'Federo' ;
     src: url(/font/Federo-Regular.ttf);
+}
+@font-face {
+    font-family:'KaiseiOpti' ;
+    src: url(/font/KaiseiOpti-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'KaiseiOpti_bold' ;
+    src: url(font/KaiseiOpti-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Merianda';
+    src: url(font/Merienda-Regular.ttf);
 }
 
 *{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: sans-serif;
-	font-size: 16px;
+	font-family: 'KaiseiOpti', sans-serif;
+	font-size: 1.6rem;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
 body{
     background-color: #FCEDED;
 }
-
-/**
-header{
-    width: 100%;
-    height: 15vh;
-    background-color: black;
+h1{
+    font-family: $main_font_bold;
+    font-size:2.4rem
 }
-**/
+
+h2{
+    font-family: $main_font_bold;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+#subtext{
+    font-size: 1.4rem;
+    color:#686868
+}
+
+#bouton_learn{
+    color: #615086;
+    border: solid #615086 0.1rem;
+    padding: 1rem;
+    font-size: 1.3rem;
+    text-decoration: none;
+    margin-top: 3rem;
+    margin-right: 15.2rem;
+
+}
+
 
 nav{
-    margin: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin: 4rem;
+    @include mixins.flex(null,center,space-between);
+
 
 
     span:nth-of-type(1){
@@ -47,25 +88,28 @@ nav{
     input[type="checkbox"]{
         display:none;
     }
+    input[type="checkbox"]:checked ~ span {
+        z-index: 2;
+
+    }
 }
 
 
 #logo{
     width: auto;
-    height: 50px;
+    height: 5rem;
 }
 
 label{
-    display:flex;
-    flex-direction:column;
+    @include mixins.flex(column);
     
-    width:50px;
+    width:5rem;
     cursor:pointer;
 
     span{
         background: rgb(0, 0, 0);
-        height:7px;
-        margin: 7px 0;
+        height:0.7rem;
+        margin: 0.7rem 0;
         transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
     }
     
@@ -76,7 +120,6 @@ label{
 
 
 nav input:hover ~ span:nth-of-type(1){
-
     transition: 0.5s ;
     width: 100%;
 }
@@ -93,7 +136,7 @@ nav input:hover ~ span:nth-of-type(3){
 nav input[type="checkbox"]:checked ~ span:nth-of-type(1){
     width: 40%;
     transform-origin:bottom;
-    transform:rotatez(45deg) translate(9px,1px)
+    transform:rotatez(45deg) translate(0.9rem,0.1rem);
 }
 
 nav input[type="checkbox"]:checked ~ span:nth-of-type(2){
@@ -103,71 +146,102 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(2){
 } 
 
 nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
-    
     transform-origin:bottom;
     width:45%;
     transform: translate(26px,-12px) rotatez(45deg);
 }
 
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #FCEDED;
+    display: flex;
+
+
+}
+
+  /* Modal Content/Box */
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15% auto;
+    padding: 11.6rem;
+    width: 80%;
+    
+    a{
+        cursor: pointer;
+        color: #262626;
+        text-decoration: none;
+        font-size:3.6rem ;
+        font-family: 'Federo',sans-serif;
+        padding-top: 4.7rem;
+    }
+}
+
+
 /*home content*/
 
 #home_content{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 80vh;
+    @include mixins.flex(column, null, space-between);
+    height: 100vh;
+    scroll-snap-align: start;
+
 }
 
 .top_content{
-    font-family: $main_font;
-    display: flex;
-    flex-direction: column;
-    margin-left: 40px;
-    margin-right: 40px;
-    /*scroll-snap-align: start;
-    overflow-y: scroll;*/
+    @include mixins.flex(column);
+    margin: 4rem;
+
     p{
-        font-size: 16px;
+        font-size: 1.6rem;
+        padding-top: 1.7rem;
+    }
+    #first_text{
+        @include mixins.flex(column);
+        padding-bottom: 1.7rem;
     }
 
-    #main_text{
-        font-size: 24px;
-        color: #262626;
+    #underline_decoration{
+        border-top: 0.2rem solid rgb(0, 0, 0);
+        width: 7rem;
+        margin-left: 6rem;
     }
-    #bouton_learn{
-        display: flex;
-        color: #615086;
-        border: solid #615086 1px;
-        padding: 10px;
-        font-size: 13px;
-        text-decoration: none;
-        margin-top: 30px;
-        margin-right: 152px;
 
+    #bouton_learn_countainer{
+        @include mixins.flex(null, null, flex-start);
     }
 }
 
 .bottom_content{
-    margin-left: 40px;
-    margin-right: 40px;
-    display: flex;
-    justify-content: flex-end;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    @include mixins.flex(null, flex-end, flex-end);
+    padding-bottom: 5rem;
 
     #decoration_dot1 {
-        height: 168px;
-        width: 168px;
+        height: 16.8rem;
+        width: 16.8rem;
         background-color: #D9D9D9;
         border-radius: 50%;
         display: inline-block;
+        margin-bottom: 2rem;
     }
     #decoration_dot2{
-        height: 78px;
-        width: 78px;
+        height: 7.8rem;
+        width: 7.8rem;
         background-color: #DCBABA;
         border-radius: 50%;
-        display: inline-block;
         position: absolute;
-        
+        margin-right: 12rem;
     }
 }
 
@@ -178,93 +252,311 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
     width: 100%;
     height: 100vh;
     background-color: #F0B4A1;
-    /*scroll-snap-align: start;*/
-}
-
-
-/*
-#move{
-    text-transform: uppercase;
-    color: #FDF6F8;
-    font-size: 15vh;
-    line-height: 6rem;
-    white-space: nowrap;
-    animation: 3s linear 1s infinite running slidein;
-}*/
-
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: paleturquoise;
-  display: flex;
-
-
-}
-
-/* Modal Content/Box */
-.modal-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 15% auto;
-    padding: 116px;
-    width: 80%;
-    
-    a{
-        cursor: pointer;
-        color: #262626;
-        text-decoration: none;
-        font-size:36px ;
-        font-family: 'Federo',sans-serif;
-        padding-top: 47px;
-    }
-}
-
-
-/* About*/
-
-html { /* body won't work ¯\_(ツ)_/¯ */
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-}
-
-.container {
-    background-color: pink;
-    height: 100vh;
-    overflow-y: scroll;
     scroll-snap-align: start;
+    @include mixins.flex(column, null, space-around);
+    
+    p{
+        margin-left: 5.5rem;
+        margin-right: 5.5rem;
+    }
+
+    #contact_first_text{
+        @include mixins.flex(column, center);
+        padding-top: 12rem;
+
+        #underline_decoration{
+        border-top: 0.2rem solid rgb(0, 0, 0);
+        width: 9.1rem;
+
+        }
+    }
+
+    #social_media{
+        margin: 4rem;
+        @include mixins.flex(column, center);
+
+        .social_media_img{
+            padding: 5rem;
+        }
+        .social_media_img img{
+            width: 2.4rem;
+            height: auto;
+        }
+    }
+
+
+    .email{
+        padding-bottom: 10rem
+    }
+
+    .email_button_container{
+        @include mixins.flex(null, null, center);
+        #email_button{
+            @include mixins.flex();
+            color: #615086;
+            border: solid #615086 0.1rem;
+            padding: 1rem;
+            font-size: 1.3rem;
+            text-decoration: none;
+            margin-top: 3rem;
+        }
+    }
 }
 
 
-/** responsive **/
 
-@media screen and (max-width: 1024px){
-    
-    h1{
-        font-size: 36px;
-    }
 
-    h2{
-        font-size: 24px;
-    }
+/////* About*//////
 
-    h3{
-        font-size: 16px;
+
+
+
+#about_me{
+    @include mixins.flex(column, null, space-between);
+    height: 100vh;
+
+
+    #about_description{
+        margin: 0 4rem 10rem 4rem;
+
+
+        #presentation_img{
+            height: 25rem;
+            width: 31rem;
+            object-fit: cover;
+            margin-bottom: 5.1rem;
+        }
+
+        #underline_decoration{
+            border-top: 0.2rem solid rgb(0, 0, 0);
+            width: 12rem;
+        }
+        
+        #title_about{
+            @include mixins.flex(column);
+            margin-bottom: 7.3rem
+        }
     }
+}
+
+
+
+
+.go_down{
+    @include mixins.flex(column,center);
 
     p{
-        font-size: 15px;
-        color: #686868;
+        color: $sub_text_color;
+        font-size: 1.2rem;
+        font-family: 'Merianda', sans-serif;
+        opacity: 80%;
+    }
+
+    #underline_decoration_2{
+        margin-top: 0.7rem;
+        border-top: 0.2rem solid $sub_text_color;
+        opacity: 40%;
+        width: 17.6rem;
+    }
+
+    .arrow_bottom{
+        @include mixins.flex(column, center);
+        margin-bottom: 4rem;
+        margin-top: 1.3rem;
+        
+        .arrow{
+            width: 0.2rem;
+            height: 6.5rem;
+            background-color: $sub_text_color;
+            display: inline-block;
+            vertical-align: middle;
+            opacity: 40%;
+        }
+        
+        .arrow_down {
+            @include mixins.arrow(down_direction);
+        }
+    }
+
+}
+
+///Skill////
+
+
+article {
+    max-width: auto;
+    margin: 1em auto;
+    overflow: hidden;
+    position: relative;
+    min-height: 4em;
+    margin-bottom: 5rem;
+
+
+    
+// slide in animation //
+
+
+    .example-left {
+        height: 10vh;
+        white-space: nowrap;
+        text-transform: uppercase;
+        color: #250710;
+        font-size: 6vh;
+        line-height: 6rem;
+    }
+    
+    .example-left {
+        -webkit-animation: slide_in 5s linear infinite; /* Safari 4.0 - 8.0 */
+        white-space: nowrap;
+        animation: slide_in 5s linear infinite alternate;
+    }
+    
+    // @keyframes mymove {
+    //     from {
+    //         left: 0;
+    //     }
+    //     to {
+    //         left: -140px;
+    //     }
+    // }
+    
+    .example-right {
+        white-space: nowrap;
+        text-transform: uppercase;
+        color: #250710;
+        font-size: 4vh;
+        line-height: 6rem;
+    }
+    
+    .example-right {
+        -webkit-animation: slide_in 8s linear infinite; /* Safari 4.0 - 8.0 */
+        white-space: nowrap;
+        animation: slide_in 8s linear infinite alternate;
     }
 }
 
 
+@keyframes slide_in {
+    from {
+        right: 0;
+    }
+    to {
+        right: -140px;
+    }
+}
+
+
+/* passions */
+
+#passion{
+    // #passion_title{
+    //     @include mixins.flex(column);
+    //     margin-left: 4rem;
+    //     margin-right: 4rem;
+
+    //     #underline_decoration{
+    //         border-top: 0.2rem solid rgb(0, 0, 0);
+    //         width: 14.2rem;
+    //     }
+    // }
+
+    .grid_gallery{
+    margin: 0 4rem 10rem 4rem;
+    padding-top: 4rem;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4 1fr);
+    grid-gap: 7.6rem;
+
+        img{
+        height:15.6rem;
+        width: 28.9rem;
+        object-fit: cover;
+        }
+        
+        p{
+            font-size: 1.3rem;
+            color: $sub_text_color;
+        }
+
+    }
+}
+
+/* Projects */
+
+
+#first_project, #second_project, #third_project{
+    margin: 0 4rem 0 4rem;
+    @include mixins.flex(column);
+    height: 100vh;
+
+    #title_project{
+        @include mixins.flex(null, null, center);
+        margin-top: 3rem;
+        margin-bottom: 9rem;
+    }
+
+    .project_content{
+
+        img{
+            height: 20rem;
+            
+            object-fit: cover;
+        }
+
+        .project_item{
+            background-color: #262626;
+            @include mixins.flex(column, center);
+            padding: 1rem;
+            margin: 3.6rem 0  5.9rem 0;
+        }
+        #bouton_learn_countainer{
+            padding-bottom: 11rem;
+            @include mixins.flex(null, null, flex-end);
+
+            #bouton_learn{
+                margin: 0;
+            }
+        }
+    }
+}
+
+#second_project, #third_project{
+    height: 80vh;
+    margin-top: 10rem;
+}
+
+
+/* parc amitié*/
+
+
+.content_project_page{
+    height: 90vh;
+    margin: 0 4rem 0 4rem;
+    .content_project_page_description{
+        @include mixins.flex(column, center);
+
+        p{
+            margin-bottom: 6rem;
+        } 
+
+        #parc_img{
+            background-color: #e4bf9d;
+            height: 20rem;
+            width: 30.9rem;
+            object-fit: contain;
+            margin-bottom: 6.4rem;
+        }
+
+
+        .content_project_page_title{
+            @include mixins.flex(null, null, center);
+            margin-bottom: 5.6rem;
+        }
+    }
+    #bouton_learn{
+        margin-right: 0;
+
+    }
+}

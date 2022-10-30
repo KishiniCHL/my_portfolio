@@ -4,10 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="/main.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+    
 </head>
 <body>
-    
+    <nav>
+        <a href="index.html"><img src="/img/200px-KCC_Ball_Kirby_Artwork.png" id="logo"></a>
+
+        <label for="menu_burger">
+            <input type="checkbox" id="menu_burger"/> 
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+        <div id="menu_info" class="modal" style="display: none ;">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                
+                <span class="close"></span>
+                <a href="/index.html" id="menu_a">Home</a>
+                <a href="/about.html" id="menu_a">About</a>
+                <a href="/project.html" id="menu_a">Projects</a>
+                <a href="/index.html#contact" id="menu_a">Contact</a>
+            </div>
+        </div>
+    </nav>
+        <section id="first_project">
+
+
+            <div id="title_project">
+                <h1>My projects</h1>
+                <span id="underline_decoration"></span>
+            </div>
+
+            <div class="project_content project_content_1">
+                <div id="title_first_project"><h2>INBACK</h2></div>
+                <div class="project_item project_item_1">
+                    <img src="img/logo1.png" alt="">
+                </div>
+                <div id="bouton_learn_countainer"><a href="project_page/inback_project.html" id="bouton_learn">Learn more ></a></div>
+            </div>
+
+            <div class="go_down">
+                <p>Next project</p>
+                <span id="underline_decoration_2"></span>
+                <div class="arrow_bottom">
+                    <span class="arrow"></span>
+                    <span class="arrow_down"></span>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="second_project">
+            <div class="project_content project_content_2">
+                <div id="title_first_project"><h2>Titre de mon projet</h2></div>
+                <div class="project_item project_item_2">
+                    <img src="img/kirbycover.png" alt="">
+                </div>
+                <div id="bouton_learn_countainer"><a href="/about.html" id="bouton_learn">Learn more ></a></div>
+            </div>
+
+            <div class="go_down">
+                <p>Next project</p>
+                <span id="underline_decoration_2"></span>
+                <div class="arrow_bottom">
+                    <span class="arrow"></span>
+                    <span class="arrow_down"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="third_project">
+            <div class="project_content project_content_3">
+                <div id="title_first_project"><h2>Parc de l'amitié</h2></div>
+                <div class="project_item project_item_3">
+                    <a href="https://parcdelamitie.vercel.app/"><img src="/img/parc_amitie.png" id="parc_project" alt="parc de l'amitié image"></a>
+                </div>
+                <div id="bouton_learn_countainer"><a href="project_page/parc_project.html" id="bouton_learn">Learn more ></a></div>
+            </div>
+            <div class="go_down">
+                <p>To be continued...</p>
+                <span id="underline_decoration_2"></span>
+                <div class="arrow_bottom">
+                    <span class="arrow"></span>
+                    <span class="arrow_down"></span>
+                </div>
+            </div>
+        </section>
 </body>
+<script src="/js/javascript.js"></script> 
 </html>

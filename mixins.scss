@@ -1,0 +1,36 @@
+@mixin flex($flex_direction : null, $align_items : null, $justify_content : null){
+    display: flex;
+    @if($flex_direction != null){
+        flex-direction: $flex_direction;
+    }
+    @if($align_items != null){
+        align-items: $align_items;
+    }
+    @if ($justify_content != null) {
+        justify-content: $justify_content;
+    } 
+}
+
+
+@mixin arrow($direction){
+
+    @if($direction == up_direction){
+
+    
+    width: 0; 
+    height: 0;
+    border-left: 0.6rem solid transparent;
+    border-right: 0.6rem solid transparent;
+    border-bottom: 0.6rem solid #686868;
+    opacity: 40%;
+    }
+
+    @if ($direction == down_direction) {
+        width: 0; 
+        height: 0;
+        border-left: 0.5rem solid transparent;
+        border-right: 0.5rem solid transparent;
+        border-top: 0.5rem solid #686868;
+        opacity: 40%;
+    }
+}

@@ -5,55 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     
     
 </head>
-    <header>
-        <nav>
-
-            <img src="/img/200px-KCC_Ball_Kirby_Artwork.png" id="logo">
-
-            <label for="menu_burger">
-                <input type="checkbox" id="menu_burger"/> 
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-            
-            <div id="menu_info" class="modal" style="display: none ;">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                    
-                    <span class="close"></span>
-                    <a href="/index.html" id="menu_a">Home</a>
-                    <a href="/about.html" id="menu_a">About</a>
-                    <a href="/project.html" id="menu_a">Projects</a>
-                    <a href="#contact" id="menu_a">Contact</a>
-                </div>
-            
-            </div>
-
-        </nav>
-    </header>
 
     <body>
         <section id="home_content">
+            <nav>
+                
+                <a href="index.html"><img src="/img/200px-KCC_Ball_Kirby_Artwork.png" id="logo"></a>
+    
+                <label for="menu_burger">
+                    <input type="checkbox" id="menu_burger"/> 
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                
+                <div id="menu_info" class="modal" style="display: none ;">
+                    <div class="modal-content">
+                        
+                        <span class="close"></span>
+                        <a href="/index.html">Home</a>
+                        <a href="/about.html">About</a>
+                        <a href="/project.html">Projects</a>
+                        <a href="/index.html#contact" id="contact_link">Contact</a>
+                    </div>
+                
+                </div>
+    
+            </nav>
             
             <div class="top_content">
                 <div class="text_content">
-                    <p>Hi, I'm <strong><b></b>Hoai-Lan</strong></b></p>
-                    <br>
-                    <p id="main_text">A Designer & Front-end developer</p>
-                    <br>
-                    <p>I’m currently a second year student at IIM
+                    <div id="first_text">
+                        <p>Hi, I'm <b>Hoai-Lan</b></p>
+                        <span id="underline_decoration"></span>
+                    </div>
+                    <h1>A Designer & Front-end developer</h1>
+                    <p id="subtext">I’m currently a second year student at IIM
                         Studying Coding and Digital Innovation</p>
                 </div>
-                <a href="/about.html" id="bouton_learn">Learn more about me ></a>
+                <div id="bouton_learn_countainer"><a href="/about.html" id="bouton_learn">Learn more about me ></a></div>
             </div>
             <div class="bottom_content">
                 <span id="decoration_dot1"></span>
@@ -62,7 +59,25 @@
         </section>
 
         <section id="contact">
+            
+            <div id="contact_first_text">
+                <h1>Contact</h1>
+                <span id="underline_decoration"></span>
+            </div>
 
+            <div id="social_media">
+                <center><p id="subtext">Here’s my social media where I’m posting updates about my work, passions and hobbies.</p></center>
+                <div class="social_media_img">
+                    <a href="https://github.com/KishiniCHL"><img src="/img/25231.png" alt="logo github"/></a>
+                    <a href="https://www.linkedin.com/in/hoai-lan-dinh-vu-17a98823b/"><img src="/img/linkedinsociallogo_121543.png" alt="logo linkedin"/></a>
+                    <a href="https://www.instagram.com/kishi_kirb/"><img src="/img/87390.png" alt="logo instagram"/></a>
+                </div>
+            </div>
+
+             <div class="email">
+                <center><p id="subtext">You can contact me by sending me an email</p></center>
+                <div class="email_button_container"><a href="mailto: hoai-lan.dinh_vu@edu.devinci.fr" id="email_button">Contacting via email</a></div> 
+            </div>
         </section>
 
         <script src="/js/javascript.js"></script> 

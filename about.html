@@ -5,17 +5,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/style.css" />
     
 </head>
 <body>
-        <span id="move">allo | test | aaaa | OOOO | AAAAA | patate |</span>
-        <section class="container"><div>Lorem ipsum dolor sit amet consectetur adipisicing elit. A consectetur nihil excepturi numquam, nulla molestias praesentium. Error eos nam exercitationem.</div></section>
-        <section class="container"><div>Lorem ipsum dolor sit amet consectetur adipisicing elit. A consectetur nihil excepturi numquam, nulla molestias praesentium. Error eos nam exercitationem.</div></section>
-        <section class="container">
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. A consectetur nihil excepturi numquam, nulla molestias praesentium. Error eos nam exercitationem.</div>
+    <nav>
+
+        <a href="index.html"><img src="/img/200px-KCC_Ball_Kirby_Artwork.png" id="logo"></a>
+
+        <label for="menu_burger">
+            <input type="checkbox" id="menu_burger"/> 
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+        <div id="menu_info" class="modal" style="display: none ;">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                
+                <span class="close"></span>
+                <a href="/index.html" id="menu_a">Home</a>
+                <a href="/about.html" id="menu_a">About</a>
+                <a href="/project.html" id="menu_a">Projects</a>
+                <a href="/index.html#contact" id="menu_a">Contact</a>
+            </div>
+        
+        </div>
+
+    </nav>
+        <section id="about_me">
+            <div id="about_description">
+                <div id="title_about">
+                    <h1>About me</h1>
+                    <span id="underline_decoration"></span>
+                </div>
+                <img src="/img/kirbycover.png" alt="about image" id="presentation_img"/>
+                <p>I’m Hoai-Lan and I’m living and studying in France. <br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo purus sed pharetra bibendum. Aenean justo dui, vehicula id sapien a, tempus imperdiet enim. Integer mauris est, sollicitudin et tortor eu, convallis imperdiet augue. 
+                </p>
+            </div>
+
+            <div class="go_down">
+                <p>My skills</p>
+                <span id="underline_decoration_2"></span>
+                <div class="arrow_bottom">
+                    <span class="arrow scroll_down_nav"></span>
+                    <span class="arrow_down scroll_down_nav"></span>
+                </div>
+            </div>
         </section>
-        <img src="/img/H2x1_Kirby30thAnniversary.jpg" alt="kirby img anniversary"/>
+        <section id="skill">
+            <article>
+                <marquee behavior="scroll" direction="left" class="example-left">| CSS3 | HTML5 | JAVASCRIPT | PHP | PYTHON | CSS3 | HTML5 | JAVASCRIPT | PHP | PYTHON | CSS3 | HTML5 | JAVASCRIPT | PHP | PYTHON | CSS3 | HTML5 | JAVASCRIPT | PHP | PYTHON | CSS3 | HTML5 | JAVASCRIPT | PHP | PYTHON | CSS3 | HTML5 | JAVASCRIPT | PHP | PYTHON |</marquee>
+                
+                <marquee behavior="scroll" direction="right" class="example-right">| ILLUSTRATOR | PHOTOSHOP | AFTER EFFECTS | PREMIERE PRO | CLIP STUDIO PAINT | </marquee>
+            </article>
+
+            
+            <div class="go_down">
+                <p>My pasions</p>
+                <span id="underline_decoration_2"></span>
+                <div class="arrow_bottom">
+                    <span class="arrow scroll_down_nav"></span>
+                    <span class="arrow_down scroll_down_nav"></span>
+                </div>
+            </div>
+        </section>
+        <section id="passion">
+            <!-- <div id="passion_title">
+                <h1>My passions</h1>
+                <span id="underline_decoration"></span>
+            </div> -->
+        <div class="grid_gallery">
+            <div class="gallery_item gallery_item-1">
+                <img src="https://picsum.photos/id/1025/600/400" alt="video game img">
+                <h2>Video Games</h2>
+                <p>Having fun</p>
+            </div>
+            <div class="gallery_item gallery_item-2">
+                <img src="https://picsum.photos/id/1020/600/400" alt="drawing img">
+                <h2>Drawing</h2>
+                <p>Creativity</p>
+            </div>
+            <div class="gallery_item gallery_item-3">
+                <img src="https://picsum.photos/id/237/600/400" alt="anime and manga">
+                <h2>Anime and manga</h2>
+                <p>Inspiration</p>
+            </div>
+            <div class="gallery_item gallery_item-4">
+                <img src="https://picsum.photos/id/1076/600/400" alt="music img">
+                <h2>Music</h2>
+                <p>Chill out</p>
+            </div>
+        </section>
         
 </body>
 <script src="/js/javascript.js"></script> 
