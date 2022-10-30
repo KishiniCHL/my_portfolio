@@ -69,8 +69,6 @@ nav{
     margin: 4rem;
     @include mixins.flex(null,center,space-between);
 
-
-
     span:nth-of-type(1){
         width:40%;
     }
@@ -88,7 +86,6 @@ nav{
     }
     input[type="checkbox"]:checked ~ span {
         z-index: 2;
-
     }
 }
 
@@ -100,7 +97,6 @@ nav{
 
 label{
     @include mixins.flex(column);
-    
     width:5rem;
     cursor:pointer;
 
@@ -110,7 +106,6 @@ label{
         margin: 0.7rem 0;
         transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
     }
-    
 }
 
 
@@ -124,7 +119,6 @@ nav input:hover ~ span:nth-of-type(1){
 
 
 nav input:hover ~ span:nth-of-type(3){
-
     transition: 0.5s ;
     width: 40%;
 }
@@ -149,23 +143,21 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
     transform: translate(26px,-12px) rotatez(45deg);
 }
 
-/* The Modal (background) */
+/* Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
     background-color: #FCEDED;
     display: flex;
-
-
 }
 
-  /* Modal Content/Box */
+  /* Modal Content */
 .modal-content {
     display: flex;
     flex-direction: column;
@@ -192,7 +184,6 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
     @include mixins.flex(column, null, space-between);
     height: 100vh;
     scroll-snap-align: start;
-
 }
 
 .top_content{
@@ -270,7 +261,6 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
         #underline_decoration{
         border-top: 0.2rem solid rgb(0, 0, 0);
         width: 9.1rem;
-
         }
     }
 
@@ -318,10 +308,8 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
     @include mixins.flex(column, null, space-between);
     height: 100vh;
 
-
     #about_description{
         margin: 0 4rem 10rem 4rem;
-
 
         #presentation_img{
             height: 25rem;
@@ -395,8 +383,6 @@ article {
     min-height: 4em;
     margin-bottom: 5rem;
 
-
-    
 // slide in animation //
 
 
@@ -414,16 +400,7 @@ article {
         white-space: nowrap;
         animation: slide_in 5s linear infinite alternate;
     }
-    
-    // @keyframes mymove {
-    //     from {
-    //         left: 0;
-    //     }
-    //     to {
-    //         left: -140px;
-    //     }
-    // }
-    
+
     .example-right {
         white-space: nowrap;
         text-transform: uppercase;
@@ -454,20 +431,8 @@ article {
 
 #passion{
     height:160vh;
-
-    // #passion_title{
-    //     @include mixins.flex(column);
-    //     margin-left: 4rem;
-    //     margin-right: 4rem;
-
-    //     #underline_decoration{
-    //         border-top: 0.2rem solid rgb(0, 0, 0);
-    //         width: 14.2rem;
-    //     }
-    // }
     background-color: #615086;
     
-
     .grid_gallery{
     margin: 0 4rem 10rem 4rem;
     padding-top: 4rem;
@@ -493,13 +458,12 @@ article {
             background-color: #9b9cec;
             padding: 2rem;
             border-radius: 0.5rem;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;        }
-
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
     }
 }
 
 /* Projects */
-
 
 #first_project, #second_project, #third_project{
     margin: 0 4rem 0 4rem;
@@ -543,9 +507,7 @@ article {
     margin-top: 10rem;
 }
 
-
 /* parc amitié*/
-
 
 .content_project_page{
     height: 100vh;
@@ -565,7 +527,6 @@ article {
             margin-bottom: 6.4rem;
         }
 
-
         .content_project_page_title{
             @include mixins.flex(null, null, center);
             margin-bottom: 5.6rem;
@@ -573,6 +534,5 @@ article {
     }
     #bouton_learn{
         margin-right: 0;
-
     }
 }
