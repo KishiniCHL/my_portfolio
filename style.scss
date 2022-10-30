@@ -62,8 +62,6 @@ p{
     font-size: 1.3rem;
     text-decoration: none;
     margin-top: 3rem;
-    margin-right: 15.2rem;
-
 }
 
 
@@ -502,8 +500,8 @@ article {
 
         img{
             height: 20rem;
-            
-            object-fit: cover;
+            max-width: 27rem;
+            object-fit: contain;
         }
 
         .project_item{

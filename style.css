@@ -58,7 +58,6 @@ p {
   font-size: 1.3rem;
   text-decoration: none;
   margin-top: 3rem;
-  margin-right: 15.2rem;
 }
 
 nav {
@@ -420,7 +419,8 @@ article .example-right {
 }
 #first_project .project_content img, #second_project .project_content img, #third_project .project_content img {
   height: 20rem;
-  object-fit: cover;
+  max-width: 27rem;
+  object-fit: contain;
 }
 #first_project .project_content .project_item, #second_project .project_content .project_item, #third_project .project_content .project_item {
   background-color: #262626;
