@@ -1,3 +1,5 @@
+/*flex*/
+
 @mixin flex($flex_direction : null, $align_items : null, $justify_content : null){
     display: flex;
     @if($flex_direction != null){
@@ -11,6 +13,7 @@
     } 
 }
 
+/*arrow style*/
 
 @mixin arrow($direction){
 
@@ -33,4 +36,12 @@
         border-top: 0.5rem solid #686868;
         opacity: 40%;
     }
+}
+
+/*responsive*/
+@mixin breakpoint($width){
+    @media screen and (max-width: $width){
+        @content;
+    }
+
 }
