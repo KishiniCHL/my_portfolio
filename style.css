@@ -241,6 +241,10 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
   align-items: center;
   padding-top: 12rem;
 }
+#contact #contact_first_text #contact_title {
+  font-family: "KaiseiOpti_bold", sans-serif;
+  font-size: 2.4rem;
+}
 #contact #contact_first_text #underline_decoration {
   border-top: 0.2rem solid rgb(0, 0, 0);
   width: 9.1rem;

@@ -259,6 +259,11 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
     }
 
     #contact_first_text{
+
+        #contact_title{
+            font-family: $main_font_bold;
+            font-size:2.4rem
+        }
         @include mixins.flex(column, center);
         padding-top: 12rem;
 
