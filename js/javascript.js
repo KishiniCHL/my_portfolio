@@ -29,5 +29,3 @@ menu_contact.onclick = function (){
   //     modal.style.display = "none";
   //   }
   // }
-
-

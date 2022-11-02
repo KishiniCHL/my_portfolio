@@ -39,6 +39,7 @@ html{
 
 body{
     background-color: #FCEDED;
+    position: relative;
 }
 h1{
     font-family: $main_font_bold;
@@ -80,11 +81,16 @@ p{
         margin-top: 3rem;
     }
 }
-
+#bouton_learn:hover {
+    box-shadow: 0px 0.5px 1rem rgba(184, 131, 131, 0.4);
+    transition: 0.2s;
+}
 
 nav{
-    
-    margin: 4rem;
+    margin: 5rem 15rem 5rem 15rem;
+    @include mixins.breakpoint(900px){
+        margin: 4rem;
+    }
     @include mixins.flex(null,center,space-between);
 
     span:nth-of-type(1){
@@ -110,8 +116,10 @@ nav{
 
 #logo{
     width: auto;
-    
-    height: 5rem;
+    height: 8rem;
+    @include mixins.breakpoint(900px){
+        height: 5rem;
+    }
 }
 
 label{
@@ -411,23 +419,51 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
     height: 100vh;
 
     #about_description{
-        margin: 0 4rem 10rem 4rem;
-
+        margin: 0 15rem 0rem 15rem;
+        @include mixins.breakpoint(900px){
+            margin: 0 4rem 10rem 4rem;
+        }
         #presentation_img{
-            height: 25rem;
-            width: 28.5rem;
+            height: 40rem;
+            width: 46.5rem;
             object-fit: cover;
-            margin-bottom: 5.1rem;
+
+            @include mixins.breakpoint(900px){
+                height: 25rem;
+                width: 28.5rem;
+                margin-bottom: 5.1rem;
+            }
         }
 
         #underline_decoration{
+            width: 17rem;
             border-top: 0.2rem solid rgb(0, 0, 0);
-            width: 12rem;
+            @include mixins.breakpoint(900px){
+                width: 12rem;
+            }
         }
         
         #title_about{
+            margin-top: 8rem;
+            margin-bottom: 8rem;
             @include mixins.flex(column);
-            margin-bottom: 7.3rem
+            @include mixins.breakpoint(900px){
+                margin-bottom: 7.3rem;
+                margin-top: 0rem;
+        }
+        }
+
+        .about_content{
+            @include mixins.flex(null, center, null);    
+            @include mixins.breakpoint(900px){
+                display:block;
+            }
+            p{
+                padding-left: 8.4rem;
+                @include mixins.breakpoint(900px){
+                    padding-left: 0;
+                }
+            }
         }
     }
 }
@@ -439,17 +475,23 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
     @include mixins.flex(column,center);
 
     p{
+        font-size: 1.6rem;
         color: $sub_text_color;
-        font-size: 1.2rem;
         font-family: 'Merianda', sans-serif;
         opacity: 80%;
+        @include mixins.breakpoint(900px){
+        font-size: 1.2rem;
+        }
     }
 
     #underline_decoration_2{
         margin-top: 0.7rem;
         border-top: 0.2rem solid $sub_text_color;
         opacity: 40%;
-        width: 17.6rem;
+        width: 30em;
+        @include mixins.breakpoint(900px){
+            width: 17.6rem;
+        }
     }
 
     .arrow_bottom{
@@ -469,6 +511,52 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
         .arrow_down {
             @include mixins.arrow(down_direction);
         }
+    }
+
+}
+/*PROJECT ABOUT*/
+
+#about_project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-bottom: 5rem;
+        padding-top: 2rem;
+    
+        .card {
+            margin: 2rem;
+            padding: 2rem;
+            width: 50rem;
+            min-height: 200px;
+            border-radius: 10px;
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+            transition: all 0.2s;
+            background: radial-gradient(#b69efe, #9b9cec);
+            background-image: url(/img/logo1_texte.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            }
+            .card-2{
+                background-image: url(/img/EdH5PZrXsAEKUUR.png);
+                background-size:cover;
+            }
+            .card-3{
+                background-image: url(/img/parc_amitie.png);
+                background-size:cover;
+            }
+
+        .card:hover {
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+            transform: scale(1.01);
+        }
+    }
+
+    .go_down{
+    padding-top: 12rem;
     }
 
 }
@@ -532,17 +620,27 @@ article {
 /* passions */
 
 #passion{
-    height:160vh;
-    background-color: #615086;
-    
+    height:120vh;
+    padding: 30rem 15rem 0rem 15rem;
+    background: radial-gradient(#b69efe, #615086);
+    @include mixins.breakpoint(900px){
+        height:160vh;
+        padding: 0;
+    }
     .grid_gallery{
-    margin: 0 4rem 10rem 4rem;
-    padding-top: 4rem;
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
-    grid-gap: 7.6rem;
+        margin: 0 4rem 10rem 4rem;
+        padding-top: 4rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 4rem;
+    @include mixins.breakpoint(900px){
+        margin: 0 4rem 10rem 4rem;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 7.6rem;
+    }
 
         img{
         height:13rem;
@@ -552,8 +650,12 @@ article {
         }
         
         p{
-            font-size: 1.3rem;
             color: #ece1f8;
+            font-size: 1.6rem;
+            @include mixins.breakpoint(900px){
+                font-size: 1.3rem;
+            }
+            
         }
 
         .gallery_item{
@@ -561,6 +663,11 @@ article {
             padding: 2rem;
             border-radius: 0.5rem;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+        .gallery_item:hover {
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+            transform: scale(1.1);
+            transition: ease-in 0.5s ;
         }
     }
 }
