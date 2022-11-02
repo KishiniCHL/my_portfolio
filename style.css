@@ -645,7 +645,7 @@ article .example-right {
 /* passions */
 #passion {
   height: 120vh;
-  padding: 30rem 15rem 0rem 15rem;
+  padding: 20rem 15rem 0rem 15rem;
   background: radial-gradient(#b69efe, #615086);
 }
 @media screen and (max-width: 900px) {
