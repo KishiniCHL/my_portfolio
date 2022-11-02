@@ -455,8 +455,10 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
 
         .about_content{
             @include mixins.flex(null, center, null);    
+            padding-bottom: 10rem;
             @include mixins.breakpoint(900px){
                 display:block;
+                padding-bottom: 0rem;
             }
             p{
                 padding-left: 8.4rem;

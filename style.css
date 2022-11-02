@@ -489,10 +489,12 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
 #about_me #about_description .about_content {
   display: flex;
   align-items: center;
+  padding-bottom: 10rem;
 }
 @media screen and (max-width: 900px) {
   #about_me #about_description .about_content {
     display: block;
+    padding-bottom: 0rem;
   }
 }
 #about_me #about_description .about_content p {
