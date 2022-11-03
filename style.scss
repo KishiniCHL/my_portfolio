@@ -43,7 +43,7 @@ body{
 }
 h1{
     font-family: $main_font_bold;
-    font-size: 3.6rem ;
+    font-size: 4rem ;
     @include mixins.breakpoint(900px){
         font-size:2.4rem
     }
@@ -437,7 +437,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
         }
 
         #underline_decoration{
-            width: 17rem;
+            width: 18.8rem;
             border-top: 0.2rem solid rgb(0, 0, 0);
             @include mixins.breakpoint(900px){
                 width: 12rem;
@@ -540,14 +540,13 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
             @include mixins.flex(column);
             margin: 2rem;
             padding: 2rem;
-            width: 50rem;
-            min-height: 200px;
-            border-radius: 10px;
+            width: 40rem;
+            border-radius: 1rem;
             box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
             transition: all 0.2s;
             background: radial-gradient(#b69efe, #9b9cec);
             @include mixins.breakpoint(900px){
-                width:45rem;
+                width:30rem;
             }
             
 
@@ -675,32 +674,49 @@ article {
 /* Projects */
 
 #first_project, #second_project, #third_project{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    @include mixins.flex(column,center,space-around);
     margin: 0 4rem 0 4rem;
-    @include mixins.flex(column);
-    height: 100vh;
-    
+    height: auto;
 
-    #title_project{
+
+    @include mixins.breakpoint(900px){
+        margin: 0;
+        height: auto;
+        padding-bottom: 5rem
+    }
+
+    #title_project_main{
         @include mixins.flex(null, null, center);
         margin-top: 3rem;
         margin-bottom: 9rem;
     }
 // content des projets 
     .project_content{
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
+        @include mixins.flex(row-reverse,null,null);
+        border: #9b999965 solid;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         background-color: #f1ecf7;
-        width: 90%;
-
-    
+        width: auto;
+        border-radius: 0.5rem;
+        @include mixins.breakpoint(900px){
+            @include mixins.flex(column-reverse,null,null);
+            width: auto;
+            height: auto;
+        }
+        
+        h2{
+            font-size: 4rem;
+            @include mixins.breakpoint(900px){
+                font-size: 2rem;
+            }
+        }
+    //img content//
         .project_item{
             height: 50rem;
-            width: 60rem;
+            width: auto;
+            @include mixins.breakpoint(900px){
+                height: 20rem;
+            }
         }
         .project_item img{
             width: 100%;
@@ -708,20 +724,35 @@ article {
             object-fit: cover;
             object-position: center;
         }
-        #title_first_project{
-            width: 50%;
+        //titre project//
+        #title_project_sub{
+            padding: 5rem;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+
+            .title_project_content{
+                display: flex;
+                flex-direction: column;
+                h2:hover ~ span {
+                    transition: 0.8s;
+                    width: 100%;
+                }
+
+            }
+            .title_project_content span{
+                height: 0.8rem;
+                width: 10rem;
+                background-color:#9b9cec;
+                border-radius: 1rem;
+                margin-top: 0.5rem;
+            }
         }
+        
 
         #bouton_learn_countainer{
-            padding-bottom: 11rem;
             @include mixins.flex(null, null, flex-end);
 
-            #bouton_learn{
-                margin: 0;
-            }
         }
     }
 }
@@ -730,14 +761,34 @@ article {
     padding-top: 10rem;
 }
 
+
+
 #second_project, #third_project{
     margin-top: 10rem;
+    margin-right: 0rem;
+
+    @include mixins.breakpoint(900px){
+        margin-top: 0;
+    }
+
+    .go_down{
+        padding-top: 10rem;
+        @include mixins.breakpoint(900px){
+            padding-top: 10rem;
+        }
+    }
 }
+
+
 #third_project{
+    padding-bottom: 10rem;
     img{
         object-fit: contain;
     }
 }
+
+
+
 /* parc amitié*/
 
 .content_project_page{

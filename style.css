@@ -44,7 +44,7 @@ body {
 
 h1 {
   font-family: "KaiseiOpti_bold", sans-serif;
-  font-size: 3.6rem;
+  font-size: 4rem;
 }
 @media screen and (max-width: 900px) {
   h1 {
@@ -466,7 +466,7 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
   }
 }
 #about_me #about_description #underline_decoration {
-  width: 17rem;
+  width: 18.8rem;
   border-top: 0.2rem solid rgb(0, 0, 0);
 }
 @media screen and (max-width: 900px) {
@@ -583,16 +583,15 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
   flex-direction: column;
   margin: 2rem;
   padding: 2rem;
-  width: 50rem;
-  min-height: 200px;
-  border-radius: 10px;
+  width: 40rem;
+  border-radius: 1rem;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
   transition: all 0.2s;
   background: radial-gradient(#b69efe, #9b9cec);
 }
 @media screen and (max-width: 900px) {
   #about_project .cards .card {
-    width: 45rem;
+    width: 30rem;
   }
 }
 #about_project .cards .card .card_project_img {
@@ -711,14 +710,20 @@ article .skill_design {
 /* Projects */
 #first_project, #second_project, #third_project {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
   margin: 0 4rem 0 4rem;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+  height: auto;
 }
-#first_project #title_project, #second_project #title_project, #third_project #title_project {
+@media screen and (max-width: 900px) {
+  #first_project, #second_project, #third_project {
+    margin: 0;
+    height: auto;
+    padding-bottom: 5rem;
+  }
+}
+#first_project #title_project_main, #second_project #title_project_main, #third_project #title_project_main {
   display: flex;
   justify-content: center;
   margin-top: 3rem;
@@ -727,14 +732,36 @@ article .skill_design {
 #first_project .project_content, #second_project .project_content, #third_project .project_content {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
+  border: rgba(155, 153, 153, 0.3960784314) solid;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background-color: #f1ecf7;
-  width: 90%;
+  width: auto;
+  border-radius: 0.5rem;
+}
+@media screen and (max-width: 900px) {
+  #first_project .project_content, #second_project .project_content, #third_project .project_content {
+    display: flex;
+    flex-direction: column-reverse;
+    width: auto;
+    height: auto;
+  }
+}
+#first_project .project_content h2, #second_project .project_content h2, #third_project .project_content h2 {
+  font-size: 4rem;
+}
+@media screen and (max-width: 900px) {
+  #first_project .project_content h2, #second_project .project_content h2, #third_project .project_content h2 {
+    font-size: 2rem;
+  }
 }
 #first_project .project_content .project_item, #second_project .project_content .project_item, #third_project .project_content .project_item {
   height: 50rem;
-  width: 60rem;
+  width: auto;
+}
+@media screen and (max-width: 900px) {
+  #first_project .project_content .project_item, #second_project .project_content .project_item, #third_project .project_content .project_item {
+    height: 20rem;
+  }
 }
 #first_project .project_content .project_item img, #second_project .project_content .project_item img, #third_project .project_content .project_item img {
   width: 100%;
@@ -742,19 +769,30 @@ article .skill_design {
   object-fit: cover;
   object-position: center;
 }
-#first_project .project_content #title_first_project, #second_project .project_content #title_first_project, #third_project .project_content #title_first_project {
-  width: 50%;
+#first_project .project_content #title_project_sub, #second_project .project_content #title_project_sub, #third_project .project_content #title_project_sub {
+  padding: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
+#first_project .project_content #title_project_sub .title_project_content, #second_project .project_content #title_project_sub .title_project_content, #third_project .project_content #title_project_sub .title_project_content {
+  display: flex;
+  flex-direction: column;
+}
+#first_project .project_content #title_project_sub .title_project_content h2:hover ~ span, #second_project .project_content #title_project_sub .title_project_content h2:hover ~ span, #third_project .project_content #title_project_sub .title_project_content h2:hover ~ span {
+  transition: 0.8s;
+  width: 100%;
+}
+#first_project .project_content #title_project_sub .title_project_content span, #second_project .project_content #title_project_sub .title_project_content span, #third_project .project_content #title_project_sub .title_project_content span {
+  height: 0.8rem;
+  width: 10rem;
+  background-color: #9b9cec;
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+}
 #first_project .project_content #bouton_learn_countainer, #second_project .project_content #bouton_learn_countainer, #third_project .project_content #bouton_learn_countainer {
-  padding-bottom: 11rem;
   display: flex;
   justify-content: flex-end;
-}
-#first_project .project_content #bouton_learn_countainer #bouton_learn, #second_project .project_content #bouton_learn_countainer #bouton_learn, #third_project .project_content #bouton_learn_countainer #bouton_learn {
-  margin: 0;
 }
 
 #first_project .go_down {
@@ -763,8 +801,25 @@ article .skill_design {
 
 #second_project, #third_project {
   margin-top: 10rem;
+  margin-right: 0rem;
+}
+@media screen and (max-width: 900px) {
+  #second_project, #third_project {
+    margin-top: 0;
+  }
+}
+#second_project .go_down, #third_project .go_down {
+  padding-top: 10rem;
+}
+@media screen and (max-width: 900px) {
+  #second_project .go_down, #third_project .go_down {
+    padding-top: 10rem;
+  }
 }
 
+#third_project {
+  padding-bottom: 10rem;
+}
 #third_project img {
   object-fit: contain;
 }
