@@ -742,7 +742,7 @@ article .skill_design {
   #first_project .project_content, #second_project .project_content, #third_project .project_content {
     display: flex;
     flex-direction: column-reverse;
-    width: auto;
+    width: 40rem;
     height: auto;
   }
 }
@@ -761,6 +761,7 @@ article .skill_design {
 @media screen and (max-width: 900px) {
   #first_project .project_content .project_item, #second_project .project_content .project_item, #third_project .project_content .project_item {
     height: 20rem;
+    background: radial-gradient(#b69efe, #8071a0);
   }
 }
 #first_project .project_content .project_item img, #second_project .project_content .project_item img, #third_project .project_content .project_item img {
@@ -768,6 +769,11 @@ article .skill_design {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+@media screen and (max-width: 900px) {
+  #first_project .project_content .project_item img, #second_project .project_content .project_item img, #third_project .project_content .project_item img {
+    object-fit: contain;
+  }
 }
 #first_project .project_content #title_project_sub, #second_project .project_content #title_project_sub, #third_project .project_content #title_project_sub {
   padding: 5rem;

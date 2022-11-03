@@ -700,7 +700,7 @@ article {
         border-radius: 0.5rem;
         @include mixins.breakpoint(900px){
             @include mixins.flex(column-reverse,null,null);
-            width: auto;
+            width: 40rem;
             height: auto;
         }
         
@@ -716,6 +716,7 @@ article {
             width: auto;
             @include mixins.breakpoint(900px){
                 height: 20rem;
+                background: radial-gradient(#b69efe, #8071a0);
             }
         }
         .project_item img{
@@ -723,6 +724,9 @@ article {
             height: 100%;
             object-fit: cover;
             object-position: center;
+            @include mixins.breakpoint(900px){
+                object-fit: contain;
+            }
         }
         //titre project//
         #title_project_sub{
