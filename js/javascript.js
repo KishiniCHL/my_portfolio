@@ -6,6 +6,7 @@ var menu = document.getElementById("menu_burger");
 
 var menu_contact = document.getElementById("contact_link");
 
+var body = document.body;
 
 // When the user clicks on the button, open the modal
 menu.onclick = function() {
@@ -14,6 +15,7 @@ menu.onclick = function() {
   }
   else{
     modal.style.display = "block"
+    // body.style.height = "100px"
   }
 }
 

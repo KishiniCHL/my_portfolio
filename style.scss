@@ -190,9 +190,10 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 15% auto;
+    margin-left: 10%;
     padding: 11.6rem;
     width: 80%;
+
     
     a{
         cursor: pointer;
@@ -526,10 +527,17 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        padding-bottom: 5rem;
+        padding-bottom: 10rem;
         padding-top: 2rem;
+        @include mixins.breakpoint(900px){
+            padding-bottom: 6rem;
+        }
     
-        .card {
+        a{
+            text-decoration: none;
+        }
+        .card {        
+            @include mixins.flex(column);
             margin: 2rem;
             padding: 2rem;
             width: 50rem;
@@ -538,22 +546,38 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
             box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
             transition: all 0.2s;
             background: radial-gradient(#b69efe, #9b9cec);
-            background-image: url(/img/logo1_texte.png);
-            background-repeat: no-repeat;
-            background-size: cover;
+            @include mixins.breakpoint(900px){
+                width:45rem;
             }
-            .card-2{
-                background-image: url(/img/EdH5PZrXsAEKUUR.png);
-                background-size:cover;
-            }
-            .card-3{
-                background-image: url(/img/parc_amitie.png);
-                background-size:cover;
+            
+
+                .card_project_img{
+                    width: 100%;
+                    height: auto;
+                }
+
+                .card_project_img img{
+                    width: 100%;
+                    height: 25rem;
+                    object-fit: cover;
+                    object-position: center;
+                }
+                .card_project_text_content{
+                    @include mixins.flex(null, center, center);
+                    background-color: #f1ecf7;
+                    height: 20rem;
+                    h2{
+                        color:#554658;
+                        @include mixins.breakpoint(900px){
+                            font-size:2rem;
+                        }
+                    }
+                }
             }
 
         .card:hover {
             box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
-            transform: scale(1.01);
+            transform: scale(1.1);
         }
     }
 
@@ -575,10 +599,7 @@ article {
     min-height: 4em;
     margin-bottom: 5rem;
 
-// slide in animation //
-
-
-    .example-left {
+    .skill_coding {
         height: 10vh;
         white-space: nowrap;
         text-transform: uppercase;
@@ -586,38 +607,15 @@ article {
         font-size: 6vh;
         line-height: 6rem;
     }
-    
-    .example-left {
-        -webkit-animation: slide_in 5s linear infinite; /* Safari 4.0 - 8.0 */
-        white-space: nowrap;
-        animation: slide_in 5s linear infinite alternate;
-    }
 
-    .example-right {
+    .skill_design {
         white-space: nowrap;
         text-transform: uppercase;
         color: #250710;
         font-size: 4vh;
         line-height: 6rem;
     }
-    
-    .example-right {
-        -webkit-animation: slide_in 8s linear infinite; /* Safari 4.0 - 8.0 */
-        white-space: nowrap;
-        animation: slide_in 8s linear infinite alternate;
-    }
 }
-
-
-@keyframes slide_in {
-    from {
-        right: 0;
-    }
-    to {
-        right: -140px;
-    }
-}
-
 
 /* passions */
 
@@ -677,31 +675,46 @@ article {
 /* Projects */
 
 #first_project, #second_project, #third_project{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     margin: 0 4rem 0 4rem;
     @include mixins.flex(column);
     height: 100vh;
+    
 
     #title_project{
         @include mixins.flex(null, null, center);
         margin-top: 3rem;
         margin-bottom: 9rem;
     }
-
+// content des projets 
     .project_content{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        background-color: #f1ecf7;
+        width: 90%;
 
-        img{
-            height: 20rem;
-            max-width: 27rem;
-            object-fit: contain;
-        }
-
+    
         .project_item{
-            background-color: #554658;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            @include mixins.flex(column, center);
-            padding: 1rem;
-            margin: 3.6rem 0  5.9rem 0;
+            height: 50rem;
+            width: 60rem;
         }
+        .project_item img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        #title_first_project{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
         #bouton_learn_countainer{
             padding-bottom: 11rem;
             @include mixins.flex(null, null, flex-end);
@@ -713,11 +726,18 @@ article {
     }
 }
 
-#second_project, #third_project{
-    height: 80vh;
-    margin-top: 10rem;
+#first_project .go_down{
+    padding-top: 10rem;
 }
 
+#second_project, #third_project{
+    margin-top: 10rem;
+}
+#third_project{
+    img{
+        object-fit: contain;
+    }
+}
 /* parc amitié*/
 
 .content_project_page{

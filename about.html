@@ -14,10 +14,12 @@
     <!-- <meta name="twitter:card" content="summary_large_image" /> -->
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@KishiniCHL" />
+    <meta name="twitter:title" content="Kishini's about me" />
     <meta name="twitter:creator" content="@KishiniCHL" />
-    <meta property="og:title" content="Kishini's Portfolio" />
+    <meta name="twitter:image" content="/img/EdaMxyaWoAYSqfX.png" />
+    <meta property="og:title" content="Kishini's about me" />
     <meta name="robots" content="index,follow" />
-    <meta property="og:description" content="Front-end developer based in Paris. Currently a student at IIM." />
+    <meta property="og:description" content="Front-end developer based in Paris. Currently a student at IIM. Learn more about me." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://kishini.com/" />
     <meta property="og:site_name" content="Kishini's Portfolio" />
@@ -37,7 +39,7 @@
 <body>
     <nav>
 
-        <a href="/index.html"><img src="/img/EdaMxyaWoAYSqfX.png" id="logo"></a>
+        <a href="/index.html"><img src="/img/EdaMxyaWoAYSqfX.png" id="logo" alt="logo image"></a>
 
         <label for="menu_burger">
             <input type="checkbox" id="menu_burger"/> 
@@ -86,9 +88,10 @@
         </section>
         <section id="skill">
             <article>
-                <marquee behavior="scroll" direction="left" class="example-left">| CSS3 | HTML5 | JAVASCRIPT | PHP | PYTHON | CSS3 | HTML5 | JAVASCRIPT | PHP | PYTHON | CSS3 | HTML5 | JAVASCRIPT | PHP | PYTHON | CSS3 | HTML5 | JAVASCRIPT | PHP | PYTHON | CSS3 | HTML5 | JAVASCRIPT | PHP | PYTHON | CSS3 | HTML5 | JAVASCRIPT | PHP | PYTHON |</marquee>
+                <!-- marquee pour défilement avec son behavior sa direction et sa vitesse -->
+                <marquee behavior="scroll" direction="left" scrollamount="16" class="skill_coding">| CSS3 | SASS | HTML5 | JAVASCRIPT | PHP | PYTHON | CSS3 | SASS | HTML5 | JAVASCRIPT | PHP | PYTHON | CSS3 | SASS | HTML5 | JAVASCRIPT | PHP | PYTHON | CSS3 | SASS | HTML5 | JAVASCRIPT | PHP | PYTHON | CSS3 | SASS | HTML5 | JAVASCRIPT | PHP | PYTHON | CSS3 | SASS | HTML5 | JAVASCRIPT | PHP | PYTHON |</marquee>
                 
-                <marquee behavior="scroll" direction="right" class="example-right">| ILLUSTRATOR | PHOTOSHOP | AFTER EFFECTS | PREMIERE PRO | ADOBE XD | CLIP STUDIO PAINT | FIGMA | </marquee>
+                <marquee behavior="scroll" direction="right" scrollamount="16" class="skill_design">| ILLUSTRATOR | PHOTOSHOP | AFTER EFFECTS | PREMIERE PRO | ADOBE XD | CLIP STUDIO PAINT | FIGMA | </marquee>
             </article>
 
             
@@ -103,9 +106,30 @@
         </section>
         <section id="about_project">
             <div class="cards">
-                <a href="project_page/inback_project.html"><div class="card card-1"></div></a>
-                <a href="project_page/art_project.html"><div class="card card-2"></div></a>
-                <a href="project_page/parc_project.html"><div class="card card-3"></div></a>
+                <a href="project_page/inback_project.html"><div class="card card-1">
+                    <div class="card_project_img">
+                        <img src="/img/logo1.png" alt="Inback project image">                      
+                    </div>
+                    <div class="card_project_text_content">
+                        <h2>INBACK project</h2>
+                    </div>
+                </div></a>
+                <a href="project_page/art_project.html"><div class="card card-2">
+                    <div class="card_project_img">
+                        <img src="/img/EdaMxyaWoAYSqfX.png" alt="Art projects image">                 
+                    </div>
+                    <div class="card_project_text_content">
+                        <h2>Art projects</h2>
+                    </div>
+                </div></a>
+                <a href="project_page/parc_project.html"><div class="card card-3">
+                    <div class="card_project_img">
+                        <img src="/img/parc_amitie.png" alt="Parc de l'amitié image">                    
+                    </div>
+                    <div class="card_project_text_content">
+                        <h2>Parc de l'Amitié</h2>
+                    </div>
+                </div></a>
             </div>
             <div id="bouton_learn_countainer"><a href="/project.html" id="bouton_learn">See more project ></a></div>
             </div>
