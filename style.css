@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*flex*/
 /*arrow style*/
 /*responsive*/
@@ -265,7 +264,7 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
   justify-content: flex-start;
 }
 .top_content #box_content {
-  position: fixed;
+  position: absolute;
   z-index: -1;
   left: 0;
   height: 65vh;
@@ -443,15 +442,7 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
-}
-#about_me #about_description {
-  margin: 0 15rem 0rem 15rem;
-}
-@media screen and (max-width: 900px) {
-  #about_me #about_description {
-    margin: 0 4rem 10rem 4rem;
-  }
+  height: auto;
 }
 #about_me #about_description #presentation_img {
   height: 40rem;
@@ -475,41 +466,80 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
   }
 }
 #about_me #about_description #title_about {
+  margin: 0 15rem 0rem 15rem;
   margin-top: 8rem;
   margin-bottom: 8rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 @media screen and (max-width: 900px) {
   #about_me #about_description #title_about {
-    margin-bottom: 7.3rem;
-    margin-top: 0rem;
+    margin: 0 0rem 7.3rem 0rem;
   }
 }
 #about_me #about_description .about_content {
+  background-color: #f4f4fa;
+  box-shadow: rgba(140, 145, 143, 0.24) 0px 3px 8px;
+  padding: 5rem;
+  padding-bottom: 10rem;
   display: flex;
   align-items: center;
-  padding-bottom: 10rem;
+  justify-content: center;
 }
 @media screen and (max-width: 900px) {
   #about_me #about_description .about_content {
-    display: block;
-    padding-bottom: 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin-bottom: 5rem;
   }
 }
 #about_me #about_description .about_content p {
-  padding-left: 8.4rem;
+  color: #414141;
 }
 @media screen and (max-width: 900px) {
   #about_me #about_description .about_content p {
     padding-left: 0;
   }
 }
+#about_me #about_description .about_content a {
+  text-decoration: none;
+}
+#about_me #about_description .about_content .img_about_content #presentation_img {
+  border-radius: 3rem;
+  object-fit: cover;
+  object-position: left;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+@media screen and (max-width: 900px) {
+  #about_me #about_description .about_content .img_about_content #presentation_img {
+    height: 20rem;
+  }
+}
+#about_me #about_description .about_content .text_content_about {
+  width: 38%;
+  padding: 3rem;
+}
+@media screen and (max-width: 900px) {
+  #about_me #about_description .about_content .text_content_about {
+    width: auto;
+    margin-left: 0;
+    padding: 0.5rem 0.5rem 5rem 0.5rem;
+  }
+}
 
 .go_down {
+  padding-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (max-width: 900px) {
+  .go_down {
+    padding-top: 1rem;
+  }
 }
 .go_down p {
   font-size: 1.6rem;
@@ -619,6 +649,9 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
     font-size: 2rem;
   }
 }
+#about_project .cards .card-3 .card_project_img img {
+  object-fit: contain;
+}
 #about_project .cards .card:hover {
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
   transform: scale(1.1);
@@ -633,7 +666,6 @@ article {
   margin: 1em auto;
   overflow: hidden;
   position: relative;
-  min-height: 4em;
   margin-bottom: 5rem;
 }
 article .skill_coding {
@@ -687,6 +719,7 @@ article .skill_design {
   object-fit: cover;
 }
 #passion .grid_gallery p {
+  font-family: "Merianda", sans-serif;
   color: #ece1f8;
   font-size: 1.6rem;
 }
@@ -742,7 +775,7 @@ article .skill_design {
   #first_project .project_content, #second_project .project_content, #third_project .project_content {
     display: flex;
     flex-direction: column-reverse;
-    width: 40rem;
+    width: 35rem;
     height: auto;
   }
 }
@@ -830,10 +863,15 @@ article .skill_design {
   object-fit: contain;
 }
 
-/* parc amitié*/
+/* pages*/
 .content_project_page {
-  height: 100vh;
+  height: auto;
+  width: auto;
   margin: 0 4rem 0 4rem;
+  border: rgba(155, 153, 153, 0.3960784314) solid;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #f1ecf7;
+  border-radius: 0.5rem;
 }
 .content_project_page .content_project_page_description {
   display: flex;
@@ -845,15 +883,27 @@ article .skill_design {
 }
 .content_project_page .content_project_page_description #parc_img, .content_project_page .content_project_page_description #inback_img {
   background-color: #e4bf9d;
-  height: 20rem;
-  width: 30.9rem;
   object-fit: contain;
+  max-width: 100rem;
   margin-bottom: 6.4rem;
 }
 .content_project_page .content_project_page_description .content_project_page_title {
+  padding-top: 5rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-bottom: 5.6rem;
+}
+.content_project_page .content_project_page_description .content_project_page_title h1:hover ~ #underline_decoration {
+  transition: 0.8s;
+  width: 100%;
+}
+.content_project_page .content_project_page_description .content_project_page_title #underline_decoration {
+  height: 0.8rem;
+  width: 10rem;
+  background: radial-gradient(#b69efe, #8071a0);
+  border-radius: 1rem;
+  margin-top: 0.5rem;
 }
 .content_project_page #bouton_learn {
   margin-right: 0;
