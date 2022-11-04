@@ -120,7 +120,7 @@ nav {
 }
 @media screen and (max-width: 900px) {
   .nav_container {
-    margin: 4rem;
+    margin: 0 4rem 0 4rem;
   }
 }
 .nav_container span:nth-of-type(1) {
@@ -140,6 +140,8 @@ nav {
 }
 
 #logo {
+  position: relative;
+  z-index: 3;
   width: auto;
   height: 8rem;
 }

@@ -106,7 +106,7 @@ nav{
     padding: 2rem 0 2rem 0;
     margin: 0 15rem 0 15rem;
     @include mixins.breakpoint(900px){
-        margin: 4rem;
+        margin: 0 4rem 0 4rem;
     }
     @include mixins.flex(null,center,space-between);
 
@@ -131,9 +131,9 @@ nav{
 }
 
 
-
-
 #logo{
+    position: relative;
+    z-index: 3;
     width: auto;
     height: 8rem;
     @include mixins.breakpoint(900px){
