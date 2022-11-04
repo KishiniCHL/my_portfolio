@@ -105,7 +105,7 @@ footer {
 
 nav {
   position: sticky;
-  z-index: 3;
+  z-index: 1;
   width: 100%;
   top: 0;
   background-color: rgba(245, 241, 241, 0.4431372549);
@@ -150,6 +150,8 @@ nav {
 }
 
 label {
+  position: relative;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   width: 5rem;
@@ -196,7 +198,7 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
 .modal {
   display: none;
   position: fixed;
-  z-index: 3;
+  z-index: 1;
   left: 0;
   top: 0;
   width: 100%;

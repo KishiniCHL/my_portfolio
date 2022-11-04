@@ -96,7 +96,7 @@ footer{
 
 nav{
     position: sticky;
-    z-index: 3;
+    z-index: 1;
     width: 100%;
     top: 0;
     background-color: #f5f1f171;
@@ -131,6 +131,8 @@ nav{
 }
 
 
+
+
 #logo{
     width: auto;
     height: 8rem;
@@ -140,6 +142,8 @@ nav{
 }
 
 label{
+    position: relative;
+    z-index: 3;
     @include mixins.flex(column);
     width:5rem;
     cursor:pointer;
@@ -191,7 +195,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
 .modal {
     display: none; 
     position: fixed; 
-    z-index: 3;
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%; 
