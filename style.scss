@@ -44,6 +44,7 @@ body{
 h1{
     font-family: $main_font_bold;
     font-size: 4rem ;
+    color: #262626;
     @include mixins.breakpoint(900px){
         font-size:2.4rem
     }
@@ -51,13 +52,20 @@ h1{
 
 h2{
     font-family: $main_font_bold;
+    color: #262626;
 }
 
 p{
     font-size: 2.4rem;
+    color: #262626;
     @include mixins.breakpoint(900px){
         font-size: 1.5rem;
     }
+}
+
+footer{
+    height: 20vh;
+    background-color: #414141;
 }
 
 #subtext{
@@ -87,8 +95,16 @@ p{
 }
 
 nav{
+    position: sticky;
+    z-index: 3;
+    width: 100%;
+    top: 0;
+    background-color: #f5f1f171;
 
-    margin: 5rem 15rem 5rem 15rem;
+}
+.nav_container{
+    padding: 2rem 0 2rem 0;
+    margin: 0 15rem 0 15rem;
     @include mixins.breakpoint(900px){
         margin: 4rem;
     }
@@ -175,7 +191,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
 .modal {
     display: none; 
     position: fixed; 
-    z-index: 1;
+    z-index: 3;
     left: 0;
     top: 0;
     width: 100%; 
@@ -216,6 +232,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
 #home_content{
     @include mixins.flex(column, null, space-between);
     height: 100vh;
+    padding-top: 20vh;
     scroll-snap-align: start;
 }
 
@@ -289,6 +306,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
         background-color: #DCBABA;
         border-radius: 50%;
         position: absolute;
+        z-index: 0;
         margin-right: 12rem;
     }
 }
@@ -299,6 +317,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
 #contact{
     width: 100%;
     height: 100vh;
+    padding-top: 5rem;
     background-color: #F0B4A1;
     scroll-snap-align: start;
     @include mixins.flex(column, null, space-around);
@@ -306,6 +325,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
     p{
         margin-left: 5.5rem;
         margin-right: 5.5rem;
+        color: #484343;
     }
 
     #contact_first_text{
@@ -317,14 +337,18 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
         #contact_title{
             font-family: $main_font_bold;
             font-size: 3.6rem;
+
             @include mixins.breakpoint(900px){
                 font-size:2.4rem
+            }
+            p{
+                color: #484343;
             }
         }
 
 
         #underline_decoration{
-        border-top: 0.2rem solid rgb(0, 0, 0);
+        border-top: 0.2rem solid rgb(90, 90, 90);
         width: 12rem;
         @include mixins.breakpoint(900px){
             width: 9.1rem;
@@ -363,6 +387,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
             padding-bottom: 0;
         }
         p{
+            color: #484343;
             padding-bottom: 5rem;
             @include mixins.breakpoint(900px){
                 padding-bottom: 1rem;
@@ -393,7 +418,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
     }
 
     #horizontal_line{
-        border-left: 0.4rem solid rgb(0, 0, 0) ;
+        border-left: 0.4rem solid rgb(68, 68, 68) ;
         height: 50rem;
         margin-bottom: 10rem;
         @include mixins.breakpoint(900px){
@@ -489,6 +514,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
             .text_content_about{
                 width: 38%;
                 padding: 3rem;
+                padding-left: 5rem;
                 @include mixins.breakpoint(900px){
                     width: auto;
                     margin-left: 0;
@@ -505,11 +531,12 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
 
 .go_down{
     padding-top: 5rem;
+
+    @include mixins.flex(column,center);
+
     @include mixins.breakpoint(900px){
         padding-top: 1rem;
     }
-    @include mixins.flex(column,center);
-
     p{
         font-size: 1.6rem;
         color: $sub_text_color;
@@ -635,6 +662,7 @@ article {
     margin: 1em auto;
     overflow: hidden;
     position: relative;
+    z-index: 0;
     margin-bottom: 5rem;
 
     .skill_coding {
@@ -744,8 +772,6 @@ article {
             height: auto;
         }
 
-        
-        
         h2{
             font-size: 4rem;
             @include mixins.breakpoint(900px){
@@ -845,19 +871,39 @@ article {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: #f1ecf7;
     border-radius: 0.5rem;
+    margin-bottom: 20vh;
+    @include mixins.breakpoint(900px){
+        margin: 0 3rem 0 3rem;
+        margin-bottom: 5rem;
+    }
 
     .content_project_page_description{
-        @include mixins.flex(column, center);
+        @include mixins.flex(column, center,center);
 
         p{
             margin-bottom: 6rem;
+            text-align: center;
+            @include mixins.breakpoint(900px){
+                margin: 1.5rem;
+            }
         } 
+        a{
+            text-decoration: none;
+            color: #8562d1;
+        }
+
+        .page_description{
+            width: 50%;
+        }
 
         #parc_img, #inback_img{
             background-color: #e4bf9d;
             object-fit: contain;
             max-width: 100rem;
             margin-bottom: 6.4rem;
+            @include mixins.breakpoint(900px){
+                max-width: 25rem;
+            }
         }
 
         .content_project_page_title{
@@ -878,8 +924,15 @@ article {
                 margin-top: 0.5rem;
             }
         }
+
+        
     }
-    #bouton_learn{
-        margin-right: 0;
+    #bouton_learn_countainer{
+        @include mixins.flex(null, null,center);
+        padding-bottom: 10rem;
+        @include mixins.breakpoint(900px){
+            padding-bottom: 5rem;
+        }
     }
+
 }
