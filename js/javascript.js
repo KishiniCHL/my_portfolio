@@ -26,9 +26,6 @@ menu_contact.onclick = function (){
 
 //les settings de la librairie js aos
 
-AOS.init();
-
-// You can also pass an optional settings object
 // below listed default settings
 AOS.init({
   // Global settings:
