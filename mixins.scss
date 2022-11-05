@@ -16,10 +16,7 @@
 /*arrow style*/
 
 @mixin arrow($direction){
-
-    @if($direction == up_direction){
-
-    
+    @if($direction == up_direction){  
     width: 0; 
     height: 0;
     border-left: 0.6rem solid transparent;

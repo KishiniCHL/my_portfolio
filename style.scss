@@ -32,6 +32,7 @@ $main_font_bold: 'KaiseiOpti_bold', sans-serif;
 }
 
 html{
+    // one met le font size a 62.5% sur le html pour que 10px équivaut à 1rem
     font-size: 62.5%;
     //on ajoute l'effet de scroll magnétique sur la balise html 
     scroll-snap-type: y mandatory;
@@ -116,14 +117,12 @@ p{
 }
 
 nav{
-    //on garde la nav quand on scroll avec un z-index 1 pour être sur de s'afficher au dessus de certain contenu de page
     position: sticky;
     z-index: 1;
     width: 100%;
     top: 0;
     background-color: #f5f1f171;
 }
-
 .nav_container{
     padding: 2rem 0 2rem 0;
     margin: 0 15rem 0 15rem;
@@ -131,53 +130,44 @@ nav{
         margin: 0 4rem 0 4rem;
     }
     @include mixins.flex(null,center,space-between);
-//le style de notre nav bar avec des bandes
     span:nth-of-type(1){
         width:40%;
     }
-
     span:nth-of-type(2){
         width:65%;
     }
-
     span:nth-of-type(3){
         width:100%;
     }
-
     input[type="checkbox"]{
         display:none;
     }
+    input[type="checkbox"]:checked ~ span {
+        z-index: 2;
+    }
 }
-
-
 #logo{
     position: relative;
-    //on met le logo en z index 2 pour passer au dessus du modal qui lui est en z index 1
-    z-index: 2;
+    z-index: 3;
     width: auto;
     height: 8rem;
     @include mixins.breakpoint(900px){
         height: 5rem;
     }
 }
-
 label{
     position: relative;
-    //on met le menu burger en z index 2 pour passer au dessus du modal qui lui est en z index 1
-    z-index: 2;
+    z-index: 3;
     @include mixins.flex(column);
     width:5rem;
     cursor:pointer;
-
     span{
         background: rgb(0, 0, 0);
         height:0.7rem;
         margin: 0.7rem 0;
-        //transition pour nos spans avec la transition et cubic bezier avec des points défini pour que ca soit homogène
         transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
     }
 }
-
 
   /** hover **/
 
@@ -236,7 +226,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
     justify-content: center;
     align-items: center;
     margin-left: 10%;
-    padding: 11.6rem;
+    padding: 10.3rem;
     width: 80%;
 
     
