@@ -794,7 +794,7 @@ article .skill_design {
 }
 
 /* Projects */
-#first_project, #second_project, #third_project {
+#first_project, #second_project, #third_project, #fourth_project {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -803,19 +803,19 @@ article .skill_design {
   height: auto;
 }
 @media screen and (max-width: 900px) {
-  #first_project, #second_project, #third_project {
+  #first_project, #second_project, #third_project, #fourth_project {
     margin: 0;
     height: auto;
     padding-bottom: 5rem;
   }
 }
-#first_project #title_project_main, #second_project #title_project_main, #third_project #title_project_main {
+#first_project #title_project_main, #second_project #title_project_main, #third_project #title_project_main, #fourth_project #title_project_main {
   display: flex;
   justify-content: center;
   margin-top: 3rem;
   margin-bottom: 9rem;
 }
-#first_project .project_content, #second_project .project_content, #third_project .project_content {
+#first_project .project_content, #second_project .project_content, #third_project .project_content, #fourth_project .project_content {
   display: flex;
   flex-direction: row-reverse;
   border: rgba(155, 153, 153, 0.3960784314) solid;
@@ -825,64 +825,64 @@ article .skill_design {
   border-radius: 0.5rem;
 }
 @media screen and (max-width: 900px) {
-  #first_project .project_content, #second_project .project_content, #third_project .project_content {
+  #first_project .project_content, #second_project .project_content, #third_project .project_content, #fourth_project .project_content {
     display: flex;
     flex-direction: column-reverse;
     width: 35rem;
     height: auto;
   }
 }
-#first_project .project_content h2, #second_project .project_content h2, #third_project .project_content h2 {
+#first_project .project_content h2, #second_project .project_content h2, #third_project .project_content h2, #fourth_project .project_content h2 {
   font-size: 4rem;
 }
 @media screen and (max-width: 900px) {
-  #first_project .project_content h2, #second_project .project_content h2, #third_project .project_content h2 {
+  #first_project .project_content h2, #second_project .project_content h2, #third_project .project_content h2, #fourth_project .project_content h2 {
     font-size: 2rem;
   }
 }
-#first_project .project_content .project_item, #second_project .project_content .project_item, #third_project .project_content .project_item {
+#first_project .project_content .project_item, #second_project .project_content .project_item, #third_project .project_content .project_item, #fourth_project .project_content .project_item {
   height: 50rem;
   width: auto;
 }
 @media screen and (max-width: 900px) {
-  #first_project .project_content .project_item, #second_project .project_content .project_item, #third_project .project_content .project_item {
+  #first_project .project_content .project_item, #second_project .project_content .project_item, #third_project .project_content .project_item, #fourth_project .project_content .project_item {
     height: 20rem;
     background: radial-gradient(#b69efe, #8071a0);
   }
 }
-#first_project .project_content .project_item img, #second_project .project_content .project_item img, #third_project .project_content .project_item img {
+#first_project .project_content .project_item img, #second_project .project_content .project_item img, #third_project .project_content .project_item img, #fourth_project .project_content .project_item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 @media screen and (max-width: 900px) {
-  #first_project .project_content .project_item img, #second_project .project_content .project_item img, #third_project .project_content .project_item img {
+  #first_project .project_content .project_item img, #second_project .project_content .project_item img, #third_project .project_content .project_item img, #fourth_project .project_content .project_item img {
     object-fit: contain;
   }
 }
-#first_project .project_content #title_project_sub, #second_project .project_content #title_project_sub, #third_project .project_content #title_project_sub {
+#first_project .project_content #title_project_sub, #second_project .project_content #title_project_sub, #third_project .project_content #title_project_sub, #fourth_project .project_content #title_project_sub {
   padding: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-#first_project .project_content #title_project_sub .title_project_content, #second_project .project_content #title_project_sub .title_project_content, #third_project .project_content #title_project_sub .title_project_content {
+#first_project .project_content #title_project_sub .title_project_content, #second_project .project_content #title_project_sub .title_project_content, #third_project .project_content #title_project_sub .title_project_content, #fourth_project .project_content #title_project_sub .title_project_content {
   display: flex;
   flex-direction: column;
 }
-#first_project .project_content #title_project_sub .title_project_content h2:hover ~ span, #second_project .project_content #title_project_sub .title_project_content h2:hover ~ span, #third_project .project_content #title_project_sub .title_project_content h2:hover ~ span {
+#first_project .project_content #title_project_sub .title_project_content h2:hover ~ span, #second_project .project_content #title_project_sub .title_project_content h2:hover ~ span, #third_project .project_content #title_project_sub .title_project_content h2:hover ~ span, #fourth_project .project_content #title_project_sub .title_project_content h2:hover ~ span {
   transition: 0.8s;
   width: 100%;
 }
-#first_project .project_content #title_project_sub .title_project_content span, #second_project .project_content #title_project_sub .title_project_content span, #third_project .project_content #title_project_sub .title_project_content span {
+#first_project .project_content #title_project_sub .title_project_content span, #second_project .project_content #title_project_sub .title_project_content span, #third_project .project_content #title_project_sub .title_project_content span, #fourth_project .project_content #title_project_sub .title_project_content span {
   height: 0.8rem;
   width: 10rem;
   background: radial-gradient(#b69efe, #8071a0);
   border-radius: 1rem;
   margin-top: 0.5rem;
 }
-#first_project .project_content #bouton_learn_countainer, #second_project .project_content #bouton_learn_countainer, #third_project .project_content #bouton_learn_countainer {
+#first_project .project_content #bouton_learn_countainer, #second_project .project_content #bouton_learn_countainer, #third_project .project_content #bouton_learn_countainer, #fourth_project .project_content #bouton_learn_countainer {
   display: flex;
   justify-content: flex-end;
 }
@@ -965,12 +965,12 @@ article .skill_design {
     margin: 0 0 1.5rem 0;
   }
 }
-.content_project_page .content_project_page_description #parc_img, .content_project_page .content_project_page_description #inback_img, .content_project_page .content_project_page_description #parc_img {
+.content_project_page .content_project_page_description #parc_img, .content_project_page .content_project_page_description #inback_img, .content_project_page .content_project_page_description #showreel_video {
   max-width: 100rem;
   margin-bottom: 6.4rem;
 }
 @media screen and (max-width: 900px) {
-  .content_project_page .content_project_page_description #parc_img, .content_project_page .content_project_page_description #inback_img, .content_project_page .content_project_page_description #parc_img {
+  .content_project_page .content_project_page_description #parc_img, .content_project_page .content_project_page_description #inback_img, .content_project_page .content_project_page_description #showreel_video {
     max-width: 25rem;
   }
 }

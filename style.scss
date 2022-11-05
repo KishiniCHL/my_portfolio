@@ -767,7 +767,7 @@ article {
 
 /* Projects */
 
-#first_project, #second_project, #third_project{
+#first_project, #second_project, #third_project, #fourth_project{
     @include mixins.flex(column,center,space-around);
     margin: 0 4rem 0 4rem;
     height: auto;
@@ -932,7 +932,7 @@ article {
             }
         }
 
-        #parc_img, #inback_img, #parc_img{
+        #parc_img, #inback_img, #showreel_video{
             max-width: 100rem;
             margin-bottom: 6.4rem;
             @include mixins.breakpoint(900px){
