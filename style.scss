@@ -170,9 +170,11 @@ label{
     cursor:pointer;
 
     span{
-        background: rgb(58, 58, 58);
+        background: rgb(0, 0, 0);
         height:0.7rem;
         margin: 0.7rem 0;
+        //transition pour nos spans avec la transition et cubic bezier avec des points défini pour que ca soit homogène
+        transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
     }
 }
 
