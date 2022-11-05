@@ -33,6 +33,7 @@ $main_font_bold: 'KaiseiOpti_bold', sans-serif;
 
 html{
     font-size: 62.5%;
+    //on ajoute l'effet de scroll magnétique sur la balise html 
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
@@ -114,13 +115,14 @@ p{
 }
 
 nav{
+    //on garde la nav quand on scroll avec un z-index 1 pour être sur de s'afficher au dessus de certain contenu de page
     position: sticky;
     z-index: 1;
     width: 100%;
     top: 0;
     background-color: #f5f1f171;
-
 }
+
 .nav_container{
     padding: 2rem 0 2rem 0;
     margin: 0 15rem 0 15rem;
@@ -128,7 +130,7 @@ nav{
         margin: 0 4rem 0 4rem;
     }
     @include mixins.flex(null,center,space-between);
-
+//le style de notre nav bar avec des bandes
     span:nth-of-type(1){
         width:40%;
     }
@@ -144,15 +146,13 @@ nav{
     input[type="checkbox"]{
         display:none;
     }
-    input[type="checkbox"]:checked ~ span {
-        z-index: 2;
-    }
 }
 
 
 #logo{
     position: relative;
-    z-index: 3;
+    //on met le logo en z index 2 pour passer au dessus du modal qui lui est en z index 1
+    z-index: 2;
     width: auto;
     height: 8rem;
     @include mixins.breakpoint(900px){
@@ -162,7 +162,8 @@ nav{
 
 label{
     position: relative;
-    z-index: 3;
+    //on met le menu burger en z index 2 pour passer au dessus du modal qui lui est en z index 1
+    z-index: 2;
     @include mixins.flex(column);
     width:5rem;
     cursor:pointer;
@@ -178,6 +179,7 @@ label{
 
   /** hover **/
 
+//le hover change la taille des span pour une disposition inversée
 
 nav input:hover ~ span:nth-of-type(1){
     transition: 0.5s ;
@@ -190,7 +192,7 @@ nav input:hover ~ span:nth-of-type(3){
     width: 40%;
 }
 
-  /** changement forme **/
+  /** changement forme pour faire une croix quand notre checkbox (=menu burger) est cochée **/
 
 nav input[type="checkbox"]:checked ~ span:nth-of-type(1){
     width: 40%;
@@ -213,6 +215,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
 /* Modal (background) */
 .modal {
     display: none; 
+    //on fixed notre modal pour qu'il reste dans la même position tout en haut des pages quand on l'ouvre
     position: fixed; 
     z-index: 1;
     left: 0;
@@ -256,6 +259,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
     @include mixins.flex(column, null, space-between);
     height: 100vh;
     padding-top: 20vh;
+    //on ajoute un scroll snap start pour l'effet de magnétisme
     scroll-snap-align: start;
 }
 
@@ -293,10 +297,11 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
         @include mixins.flex(null, null, flex-start);
     }
 
-    /*decoration visible qu'en ecran +grand que 900px*/
+    /*decoration visible SEULEMENT en ecran plus grand que 900px*/
     #box_content{
+        /*on lui met une position absolute et un left 0 pour pas que cette div 
+        influence nos div qu'on a déja mis en place*/
         position: absolute;
-        z-index: -1;
         left: 0;
         margin-left: 10rem;
 
@@ -308,7 +313,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
             border-radius: 0.5rem;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         } 
-
+        /*on le display none quand l'écran est plus petit que 900px*/
         @include mixins.breakpoint(900px){
             display: none;
         }
@@ -335,6 +340,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
         width: 7.8rem;
         background-color: #DCBABA;
         border-radius: 50%;
+        //notre décoration dot passe au dessus de l'autre avec sa position absolute
         position: absolute;
         z-index: 0;
         margin-right: 12rem;
@@ -343,12 +349,12 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
 
 /*contact*/
 
-
 #contact{
     width: 100%;
     height: auto;
     padding-top: 5rem;
     background-color: #F0B4A1;
+    //j'ai mis un scroll snap align end pour pas que le titre contact soit gêné par la nav
     scroll-snap-align: end;
     @include mixins.flex(column, null, space-around);
     
@@ -367,7 +373,6 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
         #contact_title{
             font-family: $main_font_bold;
             font-size: 3.6rem;
-
             @include mixins.breakpoint(900px){
                 font-size:2.4rem
             }
@@ -375,7 +380,6 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
                 color: #484343;
             }
         }
-
 
         #underline_decoration{
         border-top: 0.2rem solid rgb(90, 90, 90);
@@ -411,7 +415,6 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
 
     .email{
         width: 30%;
-
         @include mixins.breakpoint(900px){ 
             width: auto;
             padding-bottom: 0;
@@ -423,7 +426,6 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
                 padding-bottom: 1rem;
             }
         }
-
     }
 
     .email_button_container{
@@ -468,16 +470,11 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
     scroll-snap-align: end;
 }
 
-
 /////* About*//////
-
-
-
 
 #about_me{
     @include mixins.flex(column, null, space-between);
     height: auto;
-    
 
     #about_description{
         #presentation_img{
@@ -536,7 +533,6 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
                 text-decoration: none;
             }
 
-
             .text_content_about{
                 width: 38%;
                 padding: 3rem;
@@ -551,9 +547,6 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
 
     }
 }
-
-
-
 
 .go_down{
     padding-top: 5rem;
@@ -611,6 +604,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
     align-items: center;
     .cards {
         display: flex;
+        //un flex wrap pour que les cards passent en dessous de l'autre si on réduire la largeur de la page
         flex-wrap: wrap;
         justify-content: space-around;
         padding-bottom: 10rem;
@@ -634,7 +628,6 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
             @include mixins.breakpoint(900px){
                 width:30rem;
             }
-            
 
                 .card_project_img{
                     width: 100%;
@@ -686,6 +679,7 @@ article {
     padding-top: 8rem;
     width: 100%;
     margin: 1em auto;
+    //on cache les lignes qui dépassent avec overflow hidden
     overflow: hidden;
     position: relative;
     z-index: 0;
@@ -879,10 +873,12 @@ article {
 
 
 #third_project{
-    padding-bottom: 10rem;
     img{
         object-fit: contain;
     }
+}
+#fourth_project{
+    padding-bottom: 10rem;
 }
 
 

@@ -7,8 +7,6 @@ var menu = document.getElementById("menu_burger");
 //on prend le 4e lien (on compte a partir de 0) dans le modal//
 var menu_contact = document.getElementsByClassName("menu_a")[3];
 
-var body = document.body;
-
 // quand on clique ca ouvre le modal
 menu.onclick = function() {
   if(modal.style.display === "block"){
@@ -18,7 +16,7 @@ menu.onclick = function() {
     modal.style.display = "block"
   }
 }
-//si on clique sur contact dans le menu burger le modal se display none//
+//si on clique sur contact dans le menu burger le modal se display none et la checkbox se décoche//
 menu_contact.onclick = function (){
   modal.style.display = "none"
   menu.checked = false;
