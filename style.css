@@ -894,20 +894,20 @@ article .skill_design {
   padding-top: 10rem;
 }
 
-#second_project, #third_project {
+#second_project, #third_project, #fourth_project {
   margin-top: 10rem;
   margin-right: 0rem;
 }
 @media screen and (max-width: 900px) {
-  #second_project, #third_project {
+  #second_project, #third_project, #fourth_project {
     margin-top: 0;
   }
 }
-#second_project .go_down, #third_project .go_down {
+#second_project .go_down, #third_project .go_down, #fourth_project .go_down {
   padding-top: 10rem;
 }
 @media screen and (max-width: 900px) {
-  #second_project .go_down, #third_project .go_down {
+  #second_project .go_down, #third_project .go_down, #fourth_project .go_down {
     padding-top: 10rem;
   }
 }

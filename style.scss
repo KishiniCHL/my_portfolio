@@ -1,6 +1,8 @@
 @use "mixins";
+//variable définie qu'on va réutiliser
 $sub_text_color: #686868;
 $main_font_bold: 'KaiseiOpti_bold', sans-serif;
+//les fonts
 @font-face {
     font-family:'Federo' ;
     src: url(/font/Federo-Regular.ttf);
@@ -845,7 +847,7 @@ article {
     padding-top: 10rem;
 }
 
-#second_project, #third_project{
+#second_project, #third_project, #fourth_project{
     margin-top: 10rem;
     margin-right: 0rem;
 
