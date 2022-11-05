@@ -945,24 +945,32 @@ article .skill_design {
 }
 @media screen and (max-width: 900px) {
   .content_project_page .content_project_page_description p {
-    margin: 1.5rem;
+    margin: 2rem;
   }
 }
 .content_project_page .content_project_page_description a {
   text-decoration: none;
   color: #8562d1;
 }
-.content_project_page .content_project_page_description .page_description {
-  width: 50%;
+.content_project_page .content_project_page_description .page_description_inback {
+  width: 45%;
 }
-.content_project_page .content_project_page_description #parc_img, .content_project_page .content_project_page_description #inback_img {
-  background-color: #e4bf9d;
-  object-fit: contain;
+@media screen and (max-width: 900px) {
+  .content_project_page .content_project_page_description .page_description_inback {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .content_project_page .content_project_page_description .page_description_inback p {
+    margin: 0 0 1.5rem 0;
+  }
+}
+.content_project_page .content_project_page_description #parc_img, .content_project_page .content_project_page_description #inback_img, .content_project_page .content_project_page_description #parc_img {
   max-width: 100rem;
   margin-bottom: 6.4rem;
 }
 @media screen and (max-width: 900px) {
-  .content_project_page .content_project_page_description #parc_img, .content_project_page .content_project_page_description #inback_img {
+  .content_project_page .content_project_page_description #parc_img, .content_project_page .content_project_page_description #inback_img, .content_project_page .content_project_page_description #parc_img {
     max-width: 25rem;
   }
 }

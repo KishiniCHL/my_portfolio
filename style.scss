@@ -910,7 +910,7 @@ article {
             margin-bottom: 6rem;
             text-align: center;
             @include mixins.breakpoint(900px){
-                margin: 1.5rem;
+                margin: 2rem;
             }
         } 
         a{
@@ -918,13 +918,21 @@ article {
             color: #8562d1;
         }
 
-        .page_description{
-            width: 50%;
+        .page_description_inback{
+            width: 45%;
+
+            @include mixins.breakpoint(900px){
+                width: 80%;
+            }
+
+            p{
+                @include mixins.breakpoint(900px){
+                    margin: 0 0 1.5rem 0;
+                }
+            }
         }
 
-        #parc_img, #inback_img{
-            background-color: #e4bf9d;
-            object-fit: contain;
+        #parc_img, #inback_img, #parc_img{
             max-width: 100rem;
             margin-bottom: 6.4rem;
             @include mixins.breakpoint(900px){
@@ -950,9 +958,8 @@ article {
                 margin-top: 0.5rem;
             }
         }
-
-        
     }
+
     #bouton_learn_countainer{
         @include mixins.flex(null, null,center);
         padding-bottom: 10rem;
@@ -960,6 +967,5 @@ article {
             padding-bottom: 5rem;
         }
     }
-
 }
 
