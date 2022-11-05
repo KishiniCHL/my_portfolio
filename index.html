@@ -10,8 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- aos animation link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <meta name="description" content="Front-end developer based in Paris. Currently a student at IIM." />
-    <!-- <meta name="twitter:card" content="summary_large_image" /> -->
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@KishiniCHL" />
     <meta name="twitter:title" content="Kishini's portfolio" />
@@ -20,7 +21,6 @@
     <meta name="twitter:description" content="Hi I'm Kishini, a front-end developer and designer based in Paris. Currently a student at IIM." />
     <meta property="og:title" content="Kishini Portfolio" />
     <meta name="robots" content="index,follow" />
-    <meta property="og:description" content="Front-end developer based in Paris. Currently a student at IIM." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://kishini.com/" />
     <meta property="og:site_name" content="Kishini Portfolio" />
@@ -65,7 +65,7 @@
                     </div>
                 </div>
             </nav>
-            <section id="home_content">
+            <section id="home_content" data-aos="fade-in" data-aos-duration="1100">
             <div class="top_content">
                 <div class="text_content">
                     <div id="first_text">
@@ -91,12 +91,12 @@
         </section>
 
         <section id="contact">           
-            <div id="contact_first_text">
+            <div id="contact_first_text" data-aos="fade-down" data-aos-duration="1500">
                 <p id="contact_title">Contact</p>
                 <span id="underline_decoration"></span>
             </div>
             <div id="content_contact">
-                <div id="social_media">
+                <div id="social_media" data-aos="fade-in" data-aos-duration="1100">
                     <center><p id="subtext">Here’s my social media where I’m posting updates about my work, passions and hobbies.</p></center>
                     <div class="social_media_img">
                         <a href="https://github.com/KishiniCHL"><img src="/img/25231.png" alt="logo github"/></a>
@@ -105,9 +105,9 @@
                     </div>
                 </div>
 
-                <div id="horizontal_line"></div>
+                <div id="horizontal_line" data-aos="fade-up" data-aos-duration="1100"></div>
 
-                <div class="email">
+                <div class="email" data-aos="fade-in" data-aos-duration="1500">
                     <center><p id="subtext">You can contact me by sending me an email</p></center>
                     <div class="email_button_container"><a href="mailto: hoai-lan.dinh_vu@edu.devinci.fr" id="email_button">Contacting via email</a></div> 
                 </div>
@@ -124,5 +124,10 @@
             </div>
         </footer>
         <script src="/js/javascript.js"></script> 
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
     </body>
 </html>

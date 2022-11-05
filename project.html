@@ -10,8 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- aos animation link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <meta name="description" content="Project that I made." />
-    <!-- <meta name="twitter:card" content="summary_large_image" /> -->
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@KishiniCHL" />
     <meta name="twitter:title" content="Kishini projects" />
@@ -20,7 +21,6 @@
     <meta name="twitter:description" content="Hi I'm Kishini, a front-end developer and designer based in Paris. Currently a student at IIM." />
     <meta property="og:title" content="Kishini projects" />
     <meta name="robots" content="index,follow" />
-    <meta property="og:description" content="Front-end developer based in Paris. Currently a student at IIM. Here's my projects." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://kishini.com/" />
     <meta property="og:site_name" content="Kishini Portfolio" />
@@ -67,7 +67,7 @@
             </div>
             <!-- project -->
 
-            <div class="project_content project_content_1">
+            <div class="project_content project_content_1" data-aos="fade-down" data-aos-duration="1000">
                 <div id="title_project_sub">
                     <div class="title_project_content">
                         <h2>INBACK</h2>
@@ -93,7 +93,7 @@
 
 
         <section id="second_project">
-            <div class="project_content project_content_2">
+            <div class="project_content project_content_2" data-aos="fade-down" data-aos-duration="1000">
                 <div id="title_project_sub">
                     <div class="title_project_content">
                         <h2>My art projects</h2>
@@ -117,7 +117,7 @@
         </section>
 
         <section id="third_project">
-            <div class="project_content project_content_3">
+            <div class="project_content project_content_3" data-aos="fade-down" data-aos-duration="1000">
                 <div id="title_project_sub">
                     <div class="title_project_content">
                         <h2>Parc de l'amitié</h2>
@@ -149,6 +149,11 @@
             </div>
             </div>
         </footer>
-</body>
-<script src="/js/javascript.js"></script> 
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+        <script src="/js/javascript.js"></script> 
+    </body>
 </html>
