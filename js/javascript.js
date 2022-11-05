@@ -1,33 +1,26 @@
-// Get the modal
+// on prend le modal
 var modal = document.getElementById("menu_info");
 
-// Get the button that opens the modal
+// on appelle la variable du bouton qui permettra d'ouvrir le modal
 var menu = document.getElementById("menu_burger");
 
-var menu_contact = document.getElementById("contact_link");
+//on prend le 4e lien (on compte a partir de 0) dans le modal//
+var menu_contact = document.getElementsByClassName("menu_a")[3];
 
 var body = document.body;
 
-// When the user clicks on the button, open the modal
+// quand on clique ca ouvre le modal
 menu.onclick = function() {
   if(modal.style.display === "block"){
     modal.style.display = "none"
   }
   else{
     modal.style.display = "block"
-    // body.style.height = "100px"
   }
 }
-
-
-
+//si on clique sur contact dans le menu burger le modal se display none//
 menu_contact.onclick = function (){
   modal.style.display = "none"
   menu.checked = false;
 }
 
-  // window.onclick = function(event) {
-  //   if (event.target == modal) {
-  //     modal.style.display = "none";
-  //   }
-  // }

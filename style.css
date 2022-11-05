@@ -67,9 +67,29 @@ p {
   }
 }
 
-footer {
-  height: 20vh;
+.footer_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
   background-color: #414141;
+}
+.footer_container .social_media_img img {
+  width: 5rem;
+  height: auto;
+}
+@media screen and (max-width: 900px) {
+  .footer_container .social_media_img img {
+    width: 2rem;
+  }
+}
+.footer_container .social_media_img {
+  padding: 5rem;
+}
+.footer_container p {
+  color: #b9b9b9;
+  margin-left: 5rem;
 }
 
 #subtext {
@@ -289,10 +309,15 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
   position: absolute;
   z-index: -1;
   left: 0;
+  margin-left: 10rem;
+}
+.top_content #box_content #box_img {
   height: 65vh;
   width: 40vh;
-  margin-left: 10rem;
-  background-color: #615086;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 @media screen and (max-width: 900px) {
   .top_content #box_content {
@@ -329,10 +354,10 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
 /*contact*/
 #contact {
   width: 100%;
-  height: 100vh;
+  height: auto;
   padding-top: 5rem;
   background-color: #F0B4A1;
-  scroll-snap-align: start;
+  scroll-snap-align: end;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -448,7 +473,8 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
 }
 #contact #horizontal_line {
   border-left: 0.4rem solid rgb(68, 68, 68);
-  height: 50rem;
+  height: 40rem;
+  margin-top: 5rem;
   margin-bottom: 10rem;
 }
 @media screen and (max-width: 900px) {
@@ -467,6 +493,10 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
   }
 }
 
+.footer_container_index {
+  scroll-snap-align: end;
+}
+
 #about_me {
   display: flex;
   flex-direction: column;
@@ -477,10 +507,13 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
   height: 40rem;
   width: 46.5rem;
   object-fit: cover;
+  object-position: left;
+  border-radius: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 @media screen and (max-width: 900px) {
   #about_me #about_description #presentation_img {
-    height: 25rem;
+    height: 20rem;
     width: 28.5rem;
     margin-bottom: 5.1rem;
   }
@@ -535,17 +568,6 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
 }
 #about_me #about_description .about_content a {
   text-decoration: none;
-}
-#about_me #about_description .about_content .img_about_content #presentation_img {
-  border-radius: 3rem;
-  object-fit: cover;
-  object-position: left;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-@media screen and (max-width: 900px) {
-  #about_me #about_description .about_content .img_about_content #presentation_img {
-    height: 20rem;
-  }
 }
 #about_me #about_description .about_content .text_content_about {
   width: 38%;
@@ -717,8 +739,8 @@ article .skill_design {
 
 /* passions */
 #passion {
-  height: 120vh;
-  padding: 20rem 15rem 0rem 15rem;
+  height: auto;
+  padding: 20rem 15rem 10rem 15rem;
   background: radial-gradient(#b69efe, #615086);
 }
 @media screen and (max-width: 900px) {
