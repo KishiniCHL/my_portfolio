@@ -414,6 +414,9 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
     width: auto;
   }
 }
+#contact #social_media p {
+  text-align: center;
+}
 #contact #social_media .social_media_img {
   padding: 7rem;
 }
@@ -441,6 +444,7 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
   }
 }
 #contact .email p {
+  text-align: center;
   color: #484343;
   padding-bottom: 5rem;
 }
