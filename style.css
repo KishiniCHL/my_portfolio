@@ -719,7 +719,7 @@ nav input[type=checkbox]:checked ~ span:nth-of-type(3) {
   padding-top: 12rem;
 }
 
-article {
+.defil_skill {
   padding-top: 8rem;
   width: 100%;
   margin: 1em auto;
@@ -728,7 +728,7 @@ article {
   z-index: 0;
   margin-bottom: 5rem;
 }
-article .skill_coding {
+.defil_skill .skill_coding {
   height: 10vh;
   white-space: nowrap;
   text-transform: uppercase;
@@ -736,7 +736,7 @@ article .skill_coding {
   font-size: 6vh;
   line-height: 6rem;
 }
-article .skill_design {
+.defil_skill .skill_design {
   white-space: nowrap;
   text-transform: uppercase;
   color: #250710;
