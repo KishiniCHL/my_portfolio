@@ -763,7 +763,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
 
 /* Projects */
 
-#first_project, #second_project, #third_project, #fourth_project{
+#first_project, #second_project, #third_project, #fourth_project, #fifth_project, #sixth_project{
     @include mixins.flex(column,center,space-around);
     margin: 0 4rem 0 4rem;
     height: auto;
@@ -852,7 +852,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
     padding-top: 10rem;
 }
 
-#second_project, #third_project, #fourth_project{
+#second_project, #third_project, #fourth_project,#fifth_project,#sixth_project{
     margin-top: 10rem;
     margin-right: 0rem;
 
@@ -874,7 +874,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
         object-fit: contain;
     }
 }
-#fourth_project{
+#sixth_project{
     padding-bottom: 10rem;
 }
 
@@ -923,7 +923,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
             }
         }
 
-        #parc_img, #inback_img, #showreel_video{
+        #parc_img, #inback_img, #showreel_video, #pokeapi_img, #phone_img{
             max-width: 100rem;
             margin-bottom: 6.4rem;
             @include mixins.breakpoint(900px){
@@ -958,4 +958,7 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
             padding-bottom: 5rem;
         }
     }
+}
+#phone_img{
+    width: 40rem;
 }
