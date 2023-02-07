@@ -868,6 +868,10 @@ nav input[type="checkbox"]:checked ~ span:nth-of-type(3){
     }
 }
 
+//fix bcs first project is being updating
+#second_project{
+    margin-top: 0;
+}
 
 #third_project{
     img{
