@@ -65,6 +65,13 @@
                 </div>
             </nav>
 
+            <div id="overlay"></div>
+            <div id="popup">
+                <h1>Portfolio Under Construction</h1>
+                <p>Hi ! I'm currently reforming my portfolio, but you can still navigate through this one.</p>
+                <button id="closeButton">Close</button>            
+            </div>
+
             <section id="home_content" data-aos="fade-in" data-aos-duration="1100">
             <div class="top_content">
                 <div class="text_content">
@@ -126,6 +133,20 @@
             </div>
         </footer>
         <script src="/js/javascript.js"></script> 
+
+    <!-- POP UP POUR REFORMING PORTFOLIO -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let overlay = document.getElementById("overlay");
+                let popup = document.getElementById("popup");
+                let closeButton = document.getElementById("closeButton");
+
+                closeButton.addEventListener("click", function() {
+                    overlay.style.display = "none";
+                    popup.style.display = "none";
+                });
+            });
+        </script>
 
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
